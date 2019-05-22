@@ -1,15 +1,17 @@
 project:
   machine_name: supplier-monitoring
-  prefix: BLT
-  human_name: 'BLTed 10'
+  prefix: SM
+  human_name: 'Supplier Monitoring System'
   profile:
     name: lightning
   local:
     protocol: http
     hostname: 'local.${project.machine_name}.com'
 git:
-  default_branch: master
-  remotes: {  }
+  default_branch: 2.0
+  remotes:
+    - git@github.com:jayakrishnanj/supplier-monitoring.git
+    - eejayabal@svn-29892.prod.hosting.acquia.com:eejayabal.git
 deploy:
   tag_source: true
 drush:

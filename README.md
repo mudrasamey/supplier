@@ -8,15 +8,15 @@ Remove this section after initial setup!
 
 Search for and replace the following placeholders within this file:
 
-| Placeholder | Example |
+| Placeholder |  |
 | --- | --- |
 | `#ACQUIA_CLOUD_URL` | https://cloud.acquia.com/app/develop/applications/12345678-1234-1234-12345678901234567 |
-| `#GIT_PRIMARY_DEV_BRANCH` | `master` or `develop` |
+| `#GIT_PRIMARY_DEV_BRANCH` | `develop` |
 | `#GITHUB_ORG` | The "org" in https://github.com/org/project |
-| `#GITHUB_PROJECT` | The "project" in https://github.com/org/project |
+| `#GITHUB_PROJECT` | The "project" in git@github.com:jayakrishnanj/supplier-monitoring.git |
 | `#JIRA_URL` | https://org.atlassian.net/projects/PROJ |
-| `#LOCAL_DEV_SITE_ALIAS` | `@example.local` |
-| `#LOCAL_DEV_URL` | http://local.example.com/ |
+| `#LOCAL_DEV_SITE_ALIAS` | `@supplier-monitoring.local` |
+| `#LOCAL_DEV_URL` | http://local.supplier-monitoring.com |
 | `#TRAVIS_URL` | https://travis-ci.com/org/PROJ |
 
 # Getting Started
@@ -33,11 +33,11 @@ This project is based on BLT, an open-source project template and tool that enab
     2. [Setup Acquia Cloud SSH Keys](https://docs.acquia.com/acquia-cloud/ssh/generate)
 7. Clone your forked repository. By default, Git names this "origin" on your local.
     ```
-    $ git clone git@github.com:<account>/#GITHUB_PROJECT.git
+    $ git clone git@github.com:<your-github-account>/supplier-monitoring.git
     ```
 8. To ensure that upstream changes to the parent repository may be tracked, add the upstream locally as well.
     ```
-    $ git remote add upstream git@github.com:#GITHUB_ORG/#GITHUB_PROJECT.git
+    $ git remote add upstream git@github.com:jayakrishnanj/supplier-monitoring.git
     ```
 
 9. Update your the configuration located in the `/blt/blt.yml` file to match your site's needs. See [configuration files](#important-configuration-files) for other important configuration files.
