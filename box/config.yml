@@ -50,7 +50,7 @@ apache_vhosts:
 # It's recommended to prefix database names with 'drupal'. Otherwise,
 # you'll need to add additional users in the 'mysql_users' section.
 mysql_databases:
-  - name: drupal
+  - name: supplier-monitoring
     encoding: utf8
     collation: utf8_general_ci
 #  - name: drupal_two
@@ -58,9 +58,9 @@ mysql_databases:
 #    collation: utf8_general_ci
 
 mysql_users:
-  - name: drupal
+  - name: supplier-monitoring
     host: "%"
-    password: drupal
+    password: supplier-monitoring
     priv: "drupal%.*:ALL"
 
 # Set this to 'false' if you don't need to install drupal (using the drupal_*
