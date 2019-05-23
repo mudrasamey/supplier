@@ -50,12 +50,12 @@ apache_vhosts:
 # It's recommended to prefix database names with 'drupal'. Otherwise,
 # you'll need to add additional users in the 'mysql_users' section.
 mysql_databases:
-  - name: supplier-monitoring
+  - name: drupal
     encoding: utf8
     collation: utf8_general_ci
-#  - name: drupal_two
-#    encoding: utf8
-#    collation: utf8_general_ci
+  - name: drupal_supplier_monitoring
+    encoding: utf8
+    collation: utf8_general_ci
 
 mysql_users:
   - name: supplier-monitoring
