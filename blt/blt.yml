@@ -1,6 +1,6 @@
 project:
   machine_name: supplier-monitoring
-  prefix: SM
+  prefix: SMS
   human_name: 'Supplier Monitoring System'
   profile:
     name: lightning

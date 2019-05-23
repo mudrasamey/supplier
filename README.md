@@ -1,20 +1,13 @@
-# My Project
+# Supplier Monitoring System
 
-A brief description of My Project.
+Supplier monitoring system to monitor and provide feedback about suppliers and resources.
 
-## Using This Template
-
-Remove this section after initial setup!
-
-Search for and replace the following placeholders within this file:
-
-| Placeholder |  |
 | --- | --- |
 | `#ACQUIA_CLOUD_URL` | https://cloud.acquia.com/app/develop/applications/12345678-1234-1234-12345678901234567 |
-| `#GIT_PRIMARY_DEV_BRANCH` | `develop` |
+| `#GIT_PRIMARY_DEV_BRANCH` | `2.0` |
 | `#GITHUB_ORG` | The "org" in https://github.com/org/project |
 | `#GITHUB_PROJECT` | The "project" in git@github.com:jayakrishnanj/supplier-monitoring.git |
-| `#JIRA_URL` | https://org.atlassian.net/projects/PROJ |
+| `#JIRA_URL` | https://acquiaps.atlassian.net/secure/RapidBoard.jspa?rapidView=797&projectKey=SMS |
 | `#LOCAL_DEV_SITE_ALIAS` | `@supplier-monitoring.local` |
 | `#LOCAL_DEV_URL` | http://local.supplier-monitoring.com |
 | `#TRAVIS_URL` | https://travis-ci.com/org/PROJ |
@@ -114,15 +107,15 @@ If you have an existing database you can use BLT to pull down the database from 
 
 # Resources 
 
-Additional [BLT documentation](http://blt.readthedocs.io) may be useful. You may also access a list of BLT commands by running this:
+Additional [BLT documentation](https://docs.acquia.com/blt/) may be useful. You may also access a list of BLT commands by running this:
 ```
 $ blt
 ``` 
 
 Note the following properties of this project:
-* Primary development branch: #GIT_PRIMARY_DEV_BRANCH
-* Local environment: #LOCAL_DEV_SITE_ALIAS
-* Local site URL: #LOCAL_DEV_URL
+* Primary development branch: 2.0
+* Local environment: @supplier-monitoring.local
+* Local site URL: http://local.supplier-monitoring.com/
 
 ## Working With a BLT Project
 
@@ -142,7 +135,7 @@ BLT uses a number of configuration (`.yml` or `.json`) files to define and custo
 
 ## Resources
 
-* JIRA - #JIRA_URL
-* GitHub - https://github.com/#GITHUB_ORG/#GITHUB_PROJECT
-* Acquia Cloud subscription - #ACQUIA_CLOUD_URL
+* JIRA - https://acquiaps.atlassian.net/secure/RapidBoard.jspa?rapidView=797&projectKey=SMS
+* GitHub - git@github.com:jayakrishnanj/supplier-monitoring.git
+* Acquia Cloud subscription - https://cloud.acquia.com/app/develop/applications/d17f1f44-5baa-4b2d-aea6-b2ce232256c1
 * TravisCI - #TRAVIS_URL
