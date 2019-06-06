@@ -48,6 +48,7 @@ notifications:
 # - slack: '<account>:<token>#[channel]'
 
 before_install:
+  - openssl aes-256-cbc -K $encrypted_1b0072d01f47_key -iv $encrypted_1b0072d01f47_iv -in sms_deploy_key.enc -out ~\/sms_deploy_key -d
   # Disable xdebug.
   - phpenv config-rm xdebug.ini
   - composer self-update
@@ -71,6 +72,12 @@ deploy:
      skip_cleanup: true
      on:
        branch: 2.0
+       php: 7.2
+   - provider: script
+     script: "${BLT_DIR}/scripts/travis/deploy_branch"
+     skip_cleanup: true
+     on:
+       branch: master
        php: 7.2
    - provider: script
      script: "${BLT_DIR}/scripts/travis/deploy_tag"
