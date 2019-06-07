@@ -1,0 +1,32 @@
+uuid: 58e6660e-866f-4fe8-91de-3e8ff408cc15
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.project.comment_node_project
+    - field.field.node.project.field_end_date
+    - field.field.node.project.field_mavenlink_workspace_id
+    - field.field.node.project.field_project_manager
+    - field.field.node.project.field_project_manager_s_
+    - field.field.node.project.field_start_date
+    - node.type.project
+  module:
+    - user
+id: node.project.teaser
+targetEntityType: node
+bundle: project
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_project: true
+  field_end_date: true
+  field_mavenlink_workspace_id: true
+  field_project_manager: true
+  field_project_manager_s_: true
+  field_start_date: true

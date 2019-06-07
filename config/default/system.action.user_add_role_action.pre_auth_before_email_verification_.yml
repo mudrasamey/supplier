@@ -1,0 +1,14 @@
+uuid: 73ab8b33-29b7-483b-944f-2647ab605e48
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.pre_auth_before_email_verification_
+  module:
+    - user
+id: user_add_role_action.pre_auth_before_email_verification_
+label: 'Add the Pre Auth (Before Email Verification) role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: pre_auth_before_email_verification_

@@ -1,0 +1,27 @@
+uuid: 8e18e8cb-7970-4203-bb5a-6bf2fdb12a96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_supplier_resource_company
+    - node.type.supplier
+    - node.type.supplier_resource
+id: node.supplier_resource.field_supplier_resource_company
+field_name: field_supplier_resource_company
+entity_type: node
+bundle: supplier_resource
+label: 'Supplier Resource Company'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      supplier: supplier
+    sort:
+      field: _none
+      direction: ASC
+field_type: entity_reference

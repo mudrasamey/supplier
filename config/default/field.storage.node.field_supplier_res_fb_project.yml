@@ -1,0 +1,19 @@
+uuid: ea656686-612c-453d-96b6-b7176576cc49
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_supplier_res_fb_project
+field_name: field_supplier_res_fb_project
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

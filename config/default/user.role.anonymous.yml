@@ -1,0 +1,11 @@
+uuid: 52b07c6d-57fe-4ce6-9825-d79c34583c5c
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: pq_mEIu_B4widZN7Ap81iCJSjShFFdcL0jEiCi8VrDk
+id: anonymous
+label: 'anonymous user'
+weight: 0
+is_admin: false
+permissions: {  }

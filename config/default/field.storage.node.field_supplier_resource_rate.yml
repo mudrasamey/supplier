@@ -1,0 +1,20 @@
+uuid: 9a64e66f-7c38-491a-8a9d-4c8eeb9e1e20
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_supplier_resource_rate
+field_name: field_supplier_resource_rate
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

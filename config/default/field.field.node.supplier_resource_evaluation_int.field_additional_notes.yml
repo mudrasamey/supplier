@@ -1,0 +1,21 @@
+uuid: b6a3c59b-6e91-4d9e-8932-30553dc6cefd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_notes
+    - node.type.supplier_resource_evaluation_int
+  module:
+    - text
+id: node.supplier_resource_evaluation_int.field_additional_notes
+field_name: field_additional_notes
+entity_type: node
+bundle: supplier_resource_evaluation_int
+label: 'Additional Notes'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

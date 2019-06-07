@@ -1,0 +1,23 @@
+uuid: fc75e365-361c-4c6c-902b-9be90c657dd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_staffing_sheet_link
+    - node.type.supplier
+  module:
+    - link
+id: node.supplier.field_staffing_sheet_link
+field_name: field_staffing_sheet_link
+entity_type: node
+bundle: supplier
+label: 'Staffing Sheet Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

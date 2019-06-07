@@ -1,0 +1,8 @@
+uuid: 643d3e91-9f74-4847-9607-a90400f2f8a9
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_supplier_feedback
+label: 'Supplier Feedback comment'
+target_entity_type_id: node
+description: null

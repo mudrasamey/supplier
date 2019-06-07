@@ -1,0 +1,27 @@
+uuid: 03b3c70f-f989-4e8a-9827-502c340ef4f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_interviewed_for_project
+    - node.type.project
+    - node.type.supplier_resource_evaluation_int
+id: node.supplier_resource_evaluation_int.field_interviewed_for_project
+field_name: field_interviewed_for_project
+entity_type: node
+bundle: supplier_resource_evaluation_int
+label: 'Interviewed for Project'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      project: project
+    sort:
+      field: _none
+      direction: ASC
+field_type: entity_reference

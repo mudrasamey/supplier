@@ -1,0 +1,21 @@
+uuid: c1370c8c-6cf7-4a4f-8244-219f6aba8e7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_incidents_involved
+    - node.type.incident_log
+  module:
+    - text
+id: node.incident_log.field_incidents_involved
+field_name: field_incidents_involved
+entity_type: node
+bundle: incident_log
+label: 'Incidents Involved'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

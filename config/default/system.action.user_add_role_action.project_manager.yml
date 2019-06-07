@@ -1,0 +1,14 @@
+uuid: 581f18a2-f7e3-4b9b-82c5-7cc970c2a7f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.project_manager
+  module:
+    - user
+id: user_add_role_action.project_manager
+label: 'Add the Project Manager role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: project_manager

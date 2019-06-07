@@ -1,0 +1,9 @@
+uuid: fbc5f46d-fb98-4577-a754-f6cec6ebdbc5
+langcode: en
+status: true
+dependencies: {  }
+id: pre_auth_before_email_verification_
+label: 'Pre Auth (Before Email Verification)'
+weight: 4
+is_admin: null
+permissions: {  }

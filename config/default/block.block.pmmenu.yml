@@ -1,0 +1,25 @@
+uuid: 2450e316-d884-4f4f-863e-aa4fd243c08a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-pm-menu
+  module:
+    - system
+  theme:
+    - yorkshire
+id: pmmenu
+theme: yorkshire
+region: sidebar
+weight: -8
+provider: null
+plugin: 'system_menu_block:menu-pm-menu'
+settings:
+  id: 'system_menu_block:menu-pm-menu'
+  label: 'Feedback & Escalation'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

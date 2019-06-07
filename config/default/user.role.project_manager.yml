@@ -1,0 +1,21 @@
+uuid: 8629aab2-e13a-4794-99cf-80323f1821be
+langcode: en
+status: true
+dependencies: {  }
+id: project_manager
+label: 'Project Manager'
+weight: 3
+is_admin: null
+permissions:
+  - 'create incident_log content'
+  - 'create project content'
+  - 'create supplier_feedback content'
+  - 'create supplier_resource content'
+  - 'create supplier_resource_evaluation_int content'
+  - 'create supplier_resource_feedback content'
+  - 'edit own incident_log content'
+  - 'edit own project content'
+  - 'edit own supplier_feedback content'
+  - 'edit own supplier_resource content'
+  - 'edit own supplier_resource_evaluation_int content'
+  - 'edit own supplier_resource_feedback content'

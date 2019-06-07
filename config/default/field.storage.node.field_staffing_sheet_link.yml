@@ -1,0 +1,19 @@
+uuid: e6ca511d-0687-43b9-bd0f-f22a41618d57
+langcode: und
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_staffing_sheet_link
+field_name: field_staffing_sheet_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 0c3ae297-dd93-4fd7-8453-abf098ff171a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_the_above_feedback_does_no
+    - node.type.incident_log
+id: node.incident_log.field_the_above_feedback_does_no
+field_name: field_the_above_feedback_does_no
+entity_type: node
+bundle: incident_log
+label: 'The above feedback does not contain any Acquia confidential informationand can be shared with the supplier leadership.'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

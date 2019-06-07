@@ -1,0 +1,27 @@
+uuid: ba37df31-8885-4b2e-95c7-177a91470002
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - yorkshire
+_core:
+  default_config_hash: itSHPYmGXnBVuW6FDLy148URrBNXTe0TRtnb-yeSDHI
+id: yorkshire_account_menu
+theme: yorkshire
+region: brand
+weight: -4
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

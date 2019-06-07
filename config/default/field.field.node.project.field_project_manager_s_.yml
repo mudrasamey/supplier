@@ -1,0 +1,25 @@
+uuid: 95e39ac9-fcb8-4dda-9ac9-fa66d1cae371
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_project_manager_s_
+    - node.type.project
+id: node.project.field_project_manager_s_
+field_name: field_project_manager_s_
+entity_type: node
+bundle: project
+label: 'Project Manager(s)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    sort:
+      field: _none
+      direction: ASC
+    target_bundles: null
+field_type: entity_reference
