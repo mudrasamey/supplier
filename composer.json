@@ -49,11 +49,13 @@
         "drupal/druadmin_lte_theme": "1.0.0",
         "drupal/inline_entity_form": "1.0.0-rc1",
         "drupal/migrate_upgrade": "3.0.0",
-        "drupal/views_autocomplete_filters": "1.2.0"
+        "drupal/views_autocomplete_filters": "1.2.0",
+        "drupal/admin_theme": "1.0-beta1"
+
     },
     "require-dev": {
         "acquia/blt-require-dev": "^10.0.0-alpha1",
-        "geerlingguy/drupal-vm": "~4.3"
+        "geerlingguy/drupal-vm": "^5.0"
     },
     "extra": {
         "enable-patching": true,
