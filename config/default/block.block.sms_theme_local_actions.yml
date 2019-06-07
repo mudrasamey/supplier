@@ -1,0 +1,20 @@
+uuid: 0e375325-a10a-49fc-934a-13042d8d6e44
+langcode: en
+status: true
+dependencies:
+  theme:
+    - sms_theme
+_core:
+  default_config_hash: L7-Eq132PFY4kQPu55joPvGhHX3Ht1U2MDae3lrsYEk
+id: sms_theme_local_actions
+theme: sms_theme
+region: content
+weight: -7
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

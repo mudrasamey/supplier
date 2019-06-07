@@ -1,0 +1,22 @@
+uuid: 0f7cca93-8f0e-4262-bcce-6776ff22e962
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - sms_theme
+_core:
+  default_config_hash: c-82JqxD5ZsmgIO06pfUe-jKli4ic6W93P883TSMdHQ
+id: sms_theme_help
+theme: sms_theme
+region: content
+weight: -7
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

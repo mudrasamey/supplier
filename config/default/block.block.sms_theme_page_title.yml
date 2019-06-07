@@ -1,0 +1,20 @@
+uuid: 533c7225-f598-406a-a22d-159e92cdeae2
+langcode: en
+status: true
+dependencies:
+  theme:
+    - sms_theme
+_core:
+  default_config_hash: fsknOuPbfhrlxBGFeetJFfTtbDK_QoiGcmzrcwFI_9Y
+id: sms_theme_page_title
+theme: sms_theme
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

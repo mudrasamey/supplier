@@ -1,0 +1,22 @@
+uuid: 1c0d2f78-92f7-4181-8d37-e73fc693848b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - sms_theme
+_core:
+  default_config_hash: NLzVQ2XmNDCEV98i3H6Iz_q92aofkLOb1LurHyhvXzs
+id: sms_theme_local_tasks
+theme: sms_theme
+region: content
+weight: -7
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
