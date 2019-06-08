@@ -1,0 +1,31 @@
+uuid: bc025d57-0952-468d-a955-9dae4db2f71d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.incident_log.comment_node_incident_log
+    - field.field.node.incident_log.field_project_s_involved
+    - field.field.node.incident_log.field_supplier_resource_s_involv
+    - field.field.node.incident_log.field_supplier_s_involved
+    - field.field.node.incident_log.field_the_above_feedback_does_no
+    - node.type.incident_log
+  module:
+    - user
+id: node.incident_log.teaser
+targetEntityType: node
+bundle: incident_log
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_incident_log: true
+  field_incidents_involved: true
+  field_project_s_involved: true
+  field_supplier_resource_s_involv: true
+  field_supplier_s_involved: true
+  field_the_above_feedback_does_no: true

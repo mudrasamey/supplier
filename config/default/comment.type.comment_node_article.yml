@@ -1,0 +1,8 @@
+uuid: fc9004ff-020c-4090-92ef-cc19a9a94c8c
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_article
+label: 'Article comment'
+target_entity_type_id: node
+description: null

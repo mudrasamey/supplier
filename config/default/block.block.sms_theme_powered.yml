@@ -1,0 +1,22 @@
+uuid: 14e49b2f-3c98-4d78-be26-67e8d178f3ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sms_theme
+_core:
+  default_config_hash: uWou0ogGB197oPgPCg4RbfmTcZpG8pNckVTq6-z_6YA
+id: sms_theme_powered
+theme: sms_theme
+region: brand
+weight: -6
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

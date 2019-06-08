@@ -1,0 +1,27 @@
+uuid: c2db6e71-62aa-4069-83ca-ba21a1325ee7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_supplier_res_fb_resource
+    - node.type.supplier_resource
+    - node.type.supplier_resource_feedback
+id: node.supplier_resource_feedback.field_supplier_res_fb_resource
+field_name: field_supplier_res_fb_resource
+entity_type: node
+bundle: supplier_resource_feedback
+label: 'Supplier Resource'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      supplier_resource: supplier_resource
+    sort:
+      field: _none
+      direction: ASC
+field_type: entity_reference

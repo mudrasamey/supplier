@@ -1,0 +1,14 @@
+uuid: a5171657-3895-40f4-8786-aaf593f341df
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.pre_auth_before_email_verification_
+  module:
+    - user
+id: user_remove_role_action.pre_auth_before_email_verification_
+label: 'Remove the Pre Auth (Before Email Verification) role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: pre_auth_before_email_verification_

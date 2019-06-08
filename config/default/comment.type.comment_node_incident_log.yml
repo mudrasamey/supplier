@@ -1,0 +1,8 @@
+uuid: d1f7bcce-5d40-4e60-b0a5-d949ddb6b15a
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_incident_log
+label: 'Incident / Escalation Log comment'
+target_entity_type_id: node
+description: null

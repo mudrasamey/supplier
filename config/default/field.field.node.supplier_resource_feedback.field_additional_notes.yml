@@ -1,0 +1,21 @@
+uuid: f6e5a114-c657-47da-8201-6f64883d4ed8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_notes
+    - node.type.supplier_resource_feedback
+  module:
+    - text
+id: node.supplier_resource_feedback.field_additional_notes
+field_name: field_additional_notes
+entity_type: node
+bundle: supplier_resource_feedback
+label: 'Additional Notes'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

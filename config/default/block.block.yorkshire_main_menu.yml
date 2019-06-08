@@ -1,0 +1,27 @@
+uuid: f0fb5a63-1a67-4dff-9704-57471c7bf8c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - yorkshire
+_core:
+  default_config_hash: rQAinR5KuLdcZ_tyB1imjNm6Ha83yhTvKt8LXPoLw7w
+id: yorkshire_main_menu
+theme: yorkshire
+region: header
+weight: -6
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

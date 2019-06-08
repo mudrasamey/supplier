@@ -1,0 +1,25 @@
+uuid: 29db2f5d-68e0-414c-9e04-1fada3032aac
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - sms_theme
+id: sms_theme_usermenu
+theme: sms_theme
+region: sidebar
+weight: -6
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User menu'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

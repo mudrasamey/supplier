@@ -1,0 +1,58 @@
+uuid: e8190d3c-a487-4d1b-953c-06804ffdc34d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_supplier_feedback.default
+    - field.field.node.supplier_feedback.comment_node_supplier_feedback
+    - field.field.node.supplier_feedback.field_supplier_feedback_project
+    - field.field.node.supplier_feedback.field_supplier_feedback_supplier
+    - field.field.node.supplier_feedback.field_the_above_feedback_does_no
+    - node.type.supplier_feedback
+  module:
+    - comment
+    - options
+    - user
+id: node.supplier_feedback.default
+targetEntityType: node
+bundle: supplier_feedback
+mode: default
+content:
+  comment_node_supplier_feedback:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_supplier_feedback_project:
+    label: above
+    weight: 1
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_supplier_feedback_supplier:
+    label: above
+    weight: 0
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_the_above_feedback_does_no:
+    label: above
+    weight: 11
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

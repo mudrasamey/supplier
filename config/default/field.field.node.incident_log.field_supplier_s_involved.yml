@@ -1,0 +1,27 @@
+uuid: bad25d19-2aac-4427-9f3b-dca29dcbef21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_supplier_s_involved
+    - node.type.incident_log
+    - node.type.supplier
+id: node.incident_log.field_supplier_s_involved
+field_name: field_supplier_s_involved
+entity_type: node
+bundle: incident_log
+label: 'Supplier(s) Involved'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      supplier: supplier
+    sort:
+      field: _none
+      direction: ASC
+field_type: entity_reference

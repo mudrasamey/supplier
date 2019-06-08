@@ -1,0 +1,18 @@
+uuid: e029e9e2-5b20-4182-812b-0aa6b1decb90
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.incident_log
+id: node.incident_log.title
+field_name: title
+entity_type: node
+bundle: incident_log
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

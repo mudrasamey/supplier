@@ -1,0 +1,27 @@
+uuid: 1de7ce32-4957-464e-9acd-d7f8be8a2761
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_supplier_res_fb_project
+    - node.type.project
+    - node.type.supplier_resource_feedback
+id: node.supplier_resource_feedback.field_supplier_res_fb_project
+field_name: field_supplier_res_fb_project
+entity_type: node
+bundle: supplier_resource_feedback
+label: Project
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      project: project
+    sort:
+      field: _none
+      direction: ASC
+field_type: entity_reference

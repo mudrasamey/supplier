@@ -1,0 +1,8 @@
+uuid: 8a4715e6-0119-4429-8746-5b9e66a9fa55
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_project
+label: 'Project comment'
+target_entity_type_id: node
+description: null

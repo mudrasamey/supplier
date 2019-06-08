@@ -1,0 +1,67 @@
+uuid: 85835048-b5b1-4f15-a9ab-5676b1ccc375
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_supplier_resource.default
+    - field.field.node.supplier_resource.comment_node_supplier_resource
+    - field.field.node.supplier_resource.field_email_address
+    - field.field.node.supplier_resource.field_supplier_resource_company
+    - field.field.node.supplier_resource.field_supplier_resource_rate
+    - field.field.node.supplier_resource.field_supplier_resource_role
+    - node.type.supplier_resource
+  module:
+    - comment
+    - user
+id: node.supplier_resource.default
+targetEntityType: node
+bundle: supplier_resource
+mode: default
+content:
+  comment_node_supplier_resource:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_email_address:
+    label: above
+    weight: 0
+    type: email_mailto
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_supplier_resource_company:
+    label: above
+    weight: 1
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_supplier_resource_rate:
+    label: above
+    weight: 3
+    type: number_integer
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    region: content
+  field_supplier_resource_role:
+    label: above
+    weight: 2
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

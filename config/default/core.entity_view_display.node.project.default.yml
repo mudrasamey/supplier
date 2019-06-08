@@ -1,0 +1,76 @@
+uuid: 560bda6e-2a4f-4a40-8e23-a41eaf83d857
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_project.default
+    - field.field.node.project.comment_node_project
+    - field.field.node.project.field_end_date
+    - field.field.node.project.field_mavenlink_workspace_id
+    - field.field.node.project.field_project_manager
+    - field.field.node.project.field_project_manager_s_
+    - field.field.node.project.field_start_date
+    - node.type.project
+  module:
+    - comment
+    - user
+id: node.project.default
+targetEntityType: node
+bundle: project
+mode: default
+content:
+  comment_node_project:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_end_date:
+    label: above
+    weight: 2
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_mavenlink_workspace_id:
+    label: above
+    weight: 3
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_project_manager:
+    label: above
+    weight: 4
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_project_manager_s_:
+    label: above
+    weight: 4
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_start_date:
+    label: above
+    weight: 1
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

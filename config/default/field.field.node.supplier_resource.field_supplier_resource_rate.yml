@@ -1,0 +1,23 @@
+uuid: 709941bb-ad5b-437a-8a89-66ba4cd4674a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_supplier_resource_rate
+    - node.type.supplier_resource
+id: node.supplier_resource.field_supplier_resource_rate
+field_name: field_supplier_resource_rate
+entity_type: node
+bundle: supplier_resource
+label: 'Supplier Resource Rate'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: '(USD) $'
+  suffix: /hr
+field_type: integer

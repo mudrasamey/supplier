@@ -1,0 +1,27 @@
+uuid: 124c4737-ff70-4944-852d-0afc587bcc30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_end_date
+    - node.type.project
+    - taxonomy.vocabulary.quarters
+id: node.project.field_end_date
+field_name: field_end_date
+entity_type: node
+bundle: project
+label: 'End Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      quarters: quarters
+    sort:
+      field: _none
+      direction: ASC
+field_type: entity_reference
