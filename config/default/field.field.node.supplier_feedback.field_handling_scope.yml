@@ -1,0 +1,21 @@
+uuid: f776cee3-5f8f-448c-afad-f5723694f087
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_handling_scope
+    - node.type.supplier_feedback
+  module:
+    - options
+id: node.supplier_feedback.field_handling_scope
+field_name: field_handling_scope
+entity_type: node
+bundle: supplier_feedback
+label: 'Handling Scope'
+description: 'Did the supplier do a good job in defining scope, preventing scope creep, handling Change Requests, etc'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

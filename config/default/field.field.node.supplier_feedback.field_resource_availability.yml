@@ -1,0 +1,21 @@
+uuid: 96bc4da8-7099-42da-b08f-15864bbdfd01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_availability
+    - node.type.supplier_feedback
+  module:
+    - options
+id: node.supplier_feedback.field_resource_availability
+field_name: field_resource_availability
+entity_type: node
+bundle: supplier_feedback
+label: 'Resource Availability'
+description: 'Did the supplier have the right resources in a way that you did not have to compromise?'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float
