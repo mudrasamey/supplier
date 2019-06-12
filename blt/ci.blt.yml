@@ -12,4 +12,4 @@ project.local.hostname: 127.0.0.1:8888
 drush.debug: false
 disable-targets:
   tests:
-    behat: true
+    behat: false
