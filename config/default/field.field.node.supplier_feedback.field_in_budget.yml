@@ -1,0 +1,21 @@
+uuid: 0c203a76-846d-446d-8030-c0d58c868a72
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_in_budget
+    - node.type.supplier_feedback
+  module:
+    - options
+id: node.supplier_feedback.field_in_budget
+field_name: field_in_budget
+entity_type: node
+bundle: supplier_feedback
+label: 'In Budget'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

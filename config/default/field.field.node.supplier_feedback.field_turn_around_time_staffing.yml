@@ -1,0 +1,21 @@
+uuid: f4599fca-4666-4325-9862-84f8a245d76d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_turn_around_time_staffing
+    - node.type.supplier_feedback
+  module:
+    - options
+id: node.supplier_feedback.field_turn_around_time_staffing
+field_name: field_turn_around_time_staffing
+entity_type: node
+bundle: supplier_feedback
+label: 'Turn around time during staffing'
+description: 'How quick was the supplier in responding to the staffing requests? Did the supplier prioritize and expedite our request?'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float
