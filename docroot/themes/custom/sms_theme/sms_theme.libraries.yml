@@ -1,4 +1,8 @@
-global-styling:
+star-rating:
   css:
     component:
-      css/style.css: {}
+      css/star-rating.css: {}
+  js:
+    js/star-rating.js: {}
+  dependencies:
+    - core/jquery
