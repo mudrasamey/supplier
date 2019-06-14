@@ -1,0 +1,21 @@
+uuid: 5cb38c7a-bcad-4f99-b34f-40c7461ed30c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_incident_severity
+    - node.type.incident_log
+  module:
+    - options
+id: node.incident_log.field_incident_severity
+field_name: field_incident_severity
+entity_type: node
+bundle: incident_log
+label: 'Incident Severity'
+description: "Incident Severity :\r\n1 - Minor incident - No impact on sprint\r\n2 - Minor incident impacting sprint (Eg: Unplanned leave of 3 days)\r\n3 - Moderate incident impacting multiple sprints (Eg: Unplanned leave of 5 days or more)\r\n4 - Critical Incident (Eg: Any security incident, any escalation from the customer, anything affecting project delivery or timelines or launch)\r\n5 - Disastrous - Causing (or potentially causing) loss of a customer, someone getting fired, bad PR"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

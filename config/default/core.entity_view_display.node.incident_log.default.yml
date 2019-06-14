@@ -5,7 +5,8 @@ dependencies:
   config:
     - core.entity_view_display.comment.comment_node_incident_log.default
     - field.field.node.incident_log.comment_node_incident_log
-    - field.field.node.incident_log.field_incidents_involved
+    - field.field.node.incident_log.field_additional_notes
+    - field.field.node.incident_log.field_incident_severity
     - field.field.node.incident_log.field_project_s_involved
     - field.field.node.incident_log.field_supplier_resource_s_involv
     - field.field.node.incident_log.field_supplier_s_involved
@@ -24,22 +25,29 @@ content:
   comment_node_incident_log:
     label: hidden
     type: comment_default
-    weight: 20
+    weight: 7
     settings:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
     region: content
-  field_incidents_involved:
-    weight: 101
+  field_additional_notes:
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
+  field_incident_severity:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_project_s_involved:
     label: above
-    weight: 5
+    weight: 4
     type: entity_reference_label
     settings:
       link: true
@@ -63,14 +71,17 @@ content:
     region: content
   field_the_above_feedback_does_no:
     label: above
-    weight: 4
-    type: list_default
-    settings: {  }
+    weight: 5
+    type: boolean
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
     region: content
   links:
-    weight: 100
+    weight: 6
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }
