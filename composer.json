@@ -51,8 +51,7 @@
         "drupal/qa_accounts": "^1.0.0-alpha1",
         "drupal/seckit": "^1.0.0-alpha2",
         "drupal/shield": "^1.2.0",
-        "drupal/views_autocomplete_filters": "1.2.0",
-        "drush/drush": "9.6.2"
+        "drupal/views_autocomplete_filters": "1.2.0"
     },
     "require-dev": {
         "acquia/blt-require-dev": "^10.0.0-alpha1",
