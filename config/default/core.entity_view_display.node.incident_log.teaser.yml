@@ -24,6 +24,8 @@ content:
     region: content
 hidden:
   comment_node_incident_log: true
+  field_additional_notes: true
+  field_incident_severity: true
   field_incidents_involved: true
   field_project_s_involved: true
   field_supplier_resource_s_involv: true
