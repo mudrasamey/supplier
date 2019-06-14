@@ -8,10 +8,10 @@ project:
     protocol: http
     hostname: 'local.${project.machine_name}.com'
 git:
-  default_branch: 2.0
+  default_branch: !!float 2
   remotes:
-    - git@github.com:jayakrishnanj/supplier-monitoring.git
-    - eejayabal@svn-29892.prod.hosting.acquia.com:eejayabal.git
+    - 'git@github.com:jayakrishnanj/supplier-monitoring.git'
+    - 'eejayabal@svn-29892.prod.hosting.acquia.com:eejayabal.git'
 deploy:
   tag_source: true
 drush:
@@ -39,3 +39,5 @@ modules:
 disable-targets:
   tests:
     behat: { run: true }
+cloud:
+  appId: d17f1f44-5baa-4b2d-aea6-b2ce232256c1
