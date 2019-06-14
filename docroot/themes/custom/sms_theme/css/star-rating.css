@@ -1,0 +1,73 @@
+/* Converts radio buttons to half star rating. */
+.form-radios {
+  display: inline-flex;
+}
+
+/* make hover effect work properly in IE */
+.rating__icon {
+  pointer-events: none;
+}
+
+/* hide radio inputs */
+.form-radios input {
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+/* set icon padding and size */
+.form-radios label {
+  cursor: pointer;
+  /* if you change the left/right padding, update the margin-right property of .rating__label--half as well. */
+  padding: 0 0.1em;
+  font-size: 2.5rem;
+}
+
+.form-radios label:first-child {
+  display: none;
+}
+
+.required .form-radios label:first-child {
+  display: block;
+}
+
+/* add padding and positioning to half star labels */
+.form-composite:not(.required) .form-radios label:nth-child(4n-1) {
+  padding-right: 0;
+  margin-right: -0.6em;
+  z-index: 2;
+}
+.form-composite.required .form-radios label:nth-child(4n-3) {
+  padding-right: 0;
+  margin-right: -0.6em;
+  z-index: 2;
+}
+
+/* set default star color */
+.rating__icon--star {
+  color: orange;
+}
+
+/* if any input is checked, make its following siblings grey */
+.form-radios input:checked ~ label .rating__icon--star {
+  color: #ddd;
+}
+
+/* make all stars orange on rating group hover */
+.form-radios:hover label i.rating__icon--star {
+  color: orange;
+}
+
+/* make hovered input's following siblings grey on hover */
+.form-radios input:hover ~ label .rating__icon--star {
+  color: #ddd;
+}
+
+/* make none icon grey on rating group hover */
+.form-radios:hover input:hover + label .rating__icon--none {
+  color: #eee;
+}
+
+.field--name-field-rating .field__item i {
+  font-size: 2.5rem;
+  color: orange;
+}
