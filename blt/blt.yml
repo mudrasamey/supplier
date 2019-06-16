@@ -10,7 +10,7 @@ project:
 git:
   default_branch: !!float 2
   remotes:
-    - 'git@github.com:jayakrishnanj/supplier-monitoring.git'
+    - 'git@github.com:jayakrishnanj/supplier.git'
     - 'eejayabal@svn-29892.prod.hosting.acquia.com:eejayabal.git'
 deploy:
   tag_source: true
