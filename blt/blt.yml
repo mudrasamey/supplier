@@ -1,5 +1,5 @@
 project:
-  machine_name: supplier-monitoring
+  machine_name: supplier
   prefix: SMS
   human_name: 'Supplier Monitoring System'
   profile:
