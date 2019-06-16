@@ -1,0 +1,27 @@
+uuid: 707594b6-48c8-4fb8-b9a0-843928cbbc95
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.supplier_resource_feedback.field_supplier_res_fb_project
+    - field.field.node.supplier_resource_feedback.field_supplier_res_fb_resource
+    - field.field.node.supplier_resource_feedback.field_the_above_feedback_does_no
+    - node.type.supplier_resource_feedback
+  module:
+    - user
+id: node.supplier_resource_feedback.teaser
+targetEntityType: node
+bundle: supplier_resource_feedback
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_additional_notes: true
+  field_supplier_res_fb_project: true
+  field_supplier_res_fb_resource: true
+  field_the_above_feedback_does_no: true

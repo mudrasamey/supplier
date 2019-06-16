@@ -1,0 +1,21 @@
+uuid: 4e04e9ca-d13f-4327-8d01-c9643c3c7e9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_in_time
+    - node.type.supplier_feedback
+  module:
+    - options
+id: node.supplier_feedback.field_in_time
+field_name: field_in_time
+entity_type: node
+bundle: supplier_feedback
+label: 'In Time'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

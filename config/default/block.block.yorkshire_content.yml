@@ -1,0 +1,22 @@
+uuid: 2cc639f8-416a-40c4-9d67-85fa1d687b9e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - yorkshire
+_core:
+  default_config_hash: rLk9D-2D7B5q4WrI_NKcZ3-Wc5WiPwc0EP1iJnZmqtU
+id: yorkshire_content
+theme: yorkshire
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

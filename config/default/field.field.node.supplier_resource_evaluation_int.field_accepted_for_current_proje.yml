@@ -1,0 +1,21 @@
+uuid: be881b55-0e30-43f4-9db7-928053d23ff8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_accepted_for_current_proje
+    - node.type.supplier_resource_evaluation_int
+id: node.supplier_resource_evaluation_int.field_accepted_for_current_proje
+field_name: field_accepted_for_current_proje
+entity_type: node
+bundle: supplier_resource_evaluation_int
+label: 'Accepted for Current Project'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Accepted
+  off_label: Rejected
+field_type: boolean

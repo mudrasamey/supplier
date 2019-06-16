@@ -1,0 +1,21 @@
+uuid: e5abce61-a299-4a3f-a3ae-614d30ab56ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_notes
+    - node.type.incident_log
+  module:
+    - text
+id: node.incident_log.field_additional_notes
+field_name: field_additional_notes
+entity_type: node
+bundle: incident_log
+label: 'Incident Details'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

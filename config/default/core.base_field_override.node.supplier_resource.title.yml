@@ -1,0 +1,18 @@
+uuid: a62c83d7-f5fd-4652-9d0f-54d9328112eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.supplier_resource
+id: node.supplier_resource.title
+field_name: title
+entity_type: node
+bundle: supplier_resource
+label: 'Supplier Resource Name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

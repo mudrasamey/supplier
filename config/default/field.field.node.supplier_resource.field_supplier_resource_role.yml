@@ -1,0 +1,27 @@
+uuid: 47cb4f97-1435-4a41-93cd-b95b5917fa98
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_supplier_resource_role
+    - node.type.supplier_resource
+    - taxonomy.vocabulary.roles
+id: node.supplier_resource.field_supplier_resource_role
+field_name: field_supplier_resource_role
+entity_type: node
+bundle: supplier_resource
+label: 'Supplier Resource Role'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      roles: roles
+    sort:
+      field: _none
+      direction: ASC
+field_type: entity_reference

@@ -1,0 +1,55 @@
+uuid: a67b0610-0c59-4037-9ad4-82202296ac47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.supplier_resource_feedback.field_additional_notes
+    - field.field.node.supplier_resource_feedback.field_supplier_res_fb_project
+    - field.field.node.supplier_resource_feedback.field_supplier_res_fb_resource
+    - field.field.node.supplier_resource_feedback.field_the_above_feedback_does_no
+    - node.type.supplier_resource_feedback
+  module:
+    - options
+    - text
+    - user
+id: node.supplier_resource_feedback.default
+targetEntityType: node
+bundle: supplier_resource_feedback
+mode: default
+content:
+  field_additional_notes:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_supplier_res_fb_project:
+    label: above
+    weight: 1
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_supplier_res_fb_resource:
+    label: above
+    weight: 0
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_the_above_feedback_does_no:
+    label: above
+    weight: 11
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

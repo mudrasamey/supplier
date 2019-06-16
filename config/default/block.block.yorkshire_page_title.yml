@@ -1,0 +1,20 @@
+uuid: bda124d3-4d7d-4e39-ade9-c815a21fd86e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - yorkshire
+_core:
+  default_config_hash: fsknOuPbfhrlxBGFeetJFfTtbDK_QoiGcmzrcwFI_9Y
+id: yorkshire_page_title
+theme: yorkshire
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

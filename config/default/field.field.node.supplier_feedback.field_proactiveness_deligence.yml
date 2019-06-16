@@ -1,0 +1,21 @@
+uuid: 856f711b-593b-4252-bc4f-b2040824c30c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_proactiveness_deligence
+    - node.type.supplier_feedback
+  module:
+    - options
+id: node.supplier_feedback.field_proactiveness_deligence
+field_name: field_proactiveness_deligence
+entity_type: node
+bundle: supplier_feedback
+label: 'Proactiveness and Deligence in staffing'
+description: 'Did the supplier do their job without multiple follow-ups? Was the supplier management (not individual resources) proactive in flagging their company holidays or change in staff (employees leaving etc).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

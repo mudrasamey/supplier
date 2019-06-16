@@ -1,0 +1,29 @@
+uuid: 792c401e-16ea-414b-af0e-1ead9a00ce36
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.supplier_resource_evaluation_int.field_accepted_for_current_proje
+    - field.field.node.supplier_resource_evaluation_int.field_evaluation_resource
+    - field.field.node.supplier_resource_evaluation_int.field_interviewed_for_project
+    - field.field.node.supplier_resource_evaluation_int.field_the_above_feedback_does_no
+    - node.type.supplier_resource_evaluation_int
+  module:
+    - user
+id: node.supplier_resource_evaluation_int.teaser
+targetEntityType: node
+bundle: supplier_resource_evaluation_int
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_accepted_for_current_proje: true
+  field_additional_notes: true
+  field_evaluation_resource: true
+  field_interviewed_for_project: true
+  field_the_above_feedback_does_no: true

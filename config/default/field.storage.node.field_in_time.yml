@@ -1,0 +1,51 @@
+uuid: f7407889-4b4d-4519-bf1c-14a34e78ae50
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_in_time
+field_name: field_in_time
+entity_type: node
+type: list_float
+settings:
+  allowed_values:
+    -
+      value: 0.5
+      label: '<i class="rating__icon rating__icon--star fa fa-star-half"></i>'
+    -
+      value: !!float 1
+      label: '<i class="rating__icon rating__icon--star fa fa-star"></i>'
+    -
+      value: 1.5
+      label: '<i class="rating__icon rating__icon--star fa fa-star-half"></i>'
+    -
+      value: !!float 2
+      label: '<i class="rating__icon rating__icon--star fa fa-star"></i>'
+    -
+      value: 2.5
+      label: '<i class="rating__icon rating__icon--star fa fa-star-half"></i>'
+    -
+      value: !!float 3
+      label: '<i class="rating__icon rating__icon--star fa fa-star"></i>'
+    -
+      value: 3.5
+      label: '<i class="rating__icon rating__icon--star fa fa-star-half"></i>'
+    -
+      value: !!float 4
+      label: '<i class="rating__icon rating__icon--star fa fa-star"></i>'
+    -
+      value: 4.5
+      label: '<i class="rating__icon rating__icon--star fa fa-star-half"></i>'
+    -
+      value: !!float 5
+      label: '<i class="rating__icon rating__icon--star fa fa-star"></i>'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,8 @@
+uuid: f74ad5ac-2d5d-434b-a090-67a8bbd6638a
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_supplier_resource
+label: 'Supplier Resource comment'
+target_entity_type_id: node
+description: null

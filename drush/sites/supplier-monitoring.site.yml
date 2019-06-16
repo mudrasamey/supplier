@@ -1,0 +1,6 @@
+local:
+    root: /var/www/supplier-monitoring/docroot
+    uri: 'http://local.supplier-monitoring.com'
+    host: local.supplier-monitoring.com
+    user: vagrant
+    ssh: { options: '-o StrictHostKeyChecking=no -o PasswordAuthentication=no -i $HOME/.vagrant.d/insecure_private_key' }

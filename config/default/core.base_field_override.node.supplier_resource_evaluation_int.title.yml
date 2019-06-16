@@ -1,0 +1,18 @@
+uuid: 61de9bc3-d2ab-4c3c-82b2-738f5da68429
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.supplier_resource_evaluation_int
+id: node.supplier_resource_evaluation_int.title
+field_name: title
+entity_type: node
+bundle: supplier_resource_evaluation_int
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: 420f4da4-7b60-4b4e-9433-03d9a6aa5231
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_estimation
+    - node.type.supplier_feedback
+  module:
+    - options
+id: node.supplier_feedback.field_estimation
+field_name: field_estimation
+entity_type: node
+bundle: supplier_feedback
+label: Estimation
+description: 'Did the supplier do their due diligence and come up with the right estimates? Were the estimates close to our estimates? Did they follow our estimation process? Did they do the right POCs to increase confidence? Did they call out the right assumptions? Did they ask the right questions?'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

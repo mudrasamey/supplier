@@ -1,0 +1,187 @@
+uuid: a28c18b9-7245-493c-8830-0f797d7d4bf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.supplier_feedback.comment_node_supplier_feedback
+    - field.field.node.supplier_feedback.field_estimation
+    - field.field.node.supplier_feedback.field_handling_scope
+    - field.field.node.supplier_feedback.field_in_budget
+    - field.field.node.supplier_feedback.field_in_time
+    - field.field.node.supplier_feedback.field_overall_supplier_rating
+    - field.field.node.supplier_feedback.field_proactiveness_deligence
+    - field.field.node.supplier_feedback.field_resource_availability
+    - field.field.node.supplier_feedback.field_supplier_feedback_project
+    - field.field.node.supplier_feedback.field_supplier_feedback_supplier
+    - field.field.node.supplier_feedback.field_the_above_feedback_does_no
+    - field.field.node.supplier_feedback.field_turn_around_time_staffing
+    - node.type.supplier_feedback
+  module:
+    - comment
+    - field_group
+    - path
+third_party_settings:
+  field_group:
+    group_t_m:
+      children:
+        - field_turn_around_time_staffing
+        - field_resource_availability
+        - field_proactiveness_deligence
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'T&M'
+      region: content
+    group_supplier_led_project:
+      children:
+        - field_estimation
+        - field_handling_scope
+        - field_in_budget
+        - field_in_time
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: 'group-supplier-feedback-sled field-group-fieldset'
+        description: ''
+        required_fields: true
+      label: 'Supplier-led project'
+      region: content
+id: node.supplier_feedback.default
+targetEntityType: node
+bundle: supplier_feedback
+mode: default
+content:
+  comment_node_supplier_feedback:
+    type: comment_default
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_estimation:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_handling_scope:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_in_budget:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_in_time:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_overall_supplier_rating:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_proactiveness_deligence:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_resource_availability:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_supplier_feedback_project:
+    weight: 2
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_supplier_feedback_supplier:
+    weight: 1
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_the_above_feedback_does_no:
+    weight: 6
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    region: content
+  field_turn_around_time_staffing:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  path:
+    type: path
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 9
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 13
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 10
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 7
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

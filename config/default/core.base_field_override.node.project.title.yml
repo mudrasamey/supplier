@@ -1,0 +1,18 @@
+uuid: 2f889174-e0ce-4713-8e85-e09e73a751c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.project
+id: node.project.title
+field_name: title
+entity_type: node
+bundle: project
+label: 'Name of Project (As on Mavenlink)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

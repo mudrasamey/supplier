@@ -1,0 +1,25 @@
+uuid: 9c2c0392-78a3-4a72-ac2f-e0e46b5436e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.listing
+  module:
+    - system
+  theme:
+    - yorkshire
+id: listing
+theme: yorkshire
+region: sidebar
+weight: -7
+provider: null
+plugin: 'system_menu_block:listing'
+settings:
+  id: 'system_menu_block:listing'
+  label: Listing
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

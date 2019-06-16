@@ -1,0 +1,8 @@
+star-rating:
+  css:
+    component:
+      css/star-rating.css: {}
+  js:
+    js/star-rating.js: {}
+  dependencies:
+    - core/jquery

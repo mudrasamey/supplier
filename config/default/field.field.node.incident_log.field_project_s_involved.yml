@@ -1,0 +1,27 @@
+uuid: e3bb4c75-f4ec-4c2b-8a43-e301d955a0a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_project_s_involved
+    - node.type.incident_log
+    - node.type.project
+id: node.incident_log.field_project_s_involved
+field_name: field_project_s_involved
+entity_type: node
+bundle: incident_log
+label: 'Project(s) Involved'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      project: project
+    sort:
+      field: _none
+      direction: ASC
+field_type: entity_reference

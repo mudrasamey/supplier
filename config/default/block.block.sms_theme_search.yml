@@ -1,0 +1,22 @@
+uuid: a623b1e2-e9e3-43b6-81db-f8fe8bce9fec
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - sms_theme
+_core:
+  default_config_hash: w37z1jx_h-3uVBTkPSnd4EV5j0Vazes6xgMVSsLl1Cs
+id: sms_theme_search
+theme: sms_theme
+region: brand
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

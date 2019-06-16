@@ -1,0 +1,63 @@
+uuid: b2463340-24c1-41f9-a58b-bd730128f0bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.supplier_resource_evaluation_int.field_accepted_for_current_proje
+    - field.field.node.supplier_resource_evaluation_int.field_additional_notes
+    - field.field.node.supplier_resource_evaluation_int.field_evaluation_resource
+    - field.field.node.supplier_resource_evaluation_int.field_interviewed_for_project
+    - field.field.node.supplier_resource_evaluation_int.field_the_above_feedback_does_no
+    - node.type.supplier_resource_evaluation_int
+  module:
+    - options
+    - text
+    - user
+id: node.supplier_resource_evaluation_int.default
+targetEntityType: node
+bundle: supplier_resource_evaluation_int
+mode: default
+content:
+  field_accepted_for_current_proje:
+    label: above
+    weight: 2
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_additional_notes:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_evaluation_resource:
+    label: above
+    weight: 0
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_interviewed_for_project:
+    label: above
+    weight: 4
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_the_above_feedback_does_no:
+    label: above
+    weight: 5
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
