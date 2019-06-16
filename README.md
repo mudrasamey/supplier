@@ -6,11 +6,11 @@ Supplier monitoring system to monitor and provide feedback about suppliers and r
 | `#ACQUIA_CLOUD_URL` | https://cloud.acquia.com/app/develop/applications/12345678-1234-1234-12345678901234567 |
 | `#GIT_PRIMARY_DEV_BRANCH` | `2.0` |
 | `#GITHUB_ORG` | The "org" in https://github.com/org/project |
-| `#GITHUB_PROJECT` | The "project" in git@github.com:jayakrishnanj/supplier-monitoring.git |
+| `#GITHUB_PROJECT` | The "project" in git@github.com:jayakrishnanj/supplier.git |
 | `#JIRA_URL` | https://acquiaps.atlassian.net/secure/RapidBoard.jspa?rapidView=797&projectKey=SMS |
 | `#LOCAL_DEV_SITE_ALIAS` | `@supplier-monitoring.local` |
 | `#LOCAL_DEV_URL` | http://local.supplier-monitoring.com |
-| `#TRAVIS_URL` | https://travis-ci.com/org/PROJ |
+| `#TRAVIS_URL` | https://travis-ci.org/jayakrishnanj/supplier |
 
 # Getting Started
 
@@ -26,11 +26,11 @@ This project is based on BLT, an open-source project template and tool that enab
     2. [Setup Acquia Cloud SSH Keys](https://docs.acquia.com/acquia-cloud/ssh/generate)
 7. Clone your forked repository. By default, Git names this "origin" on your local.
     ```
-    $ git clone git@github.com:<your-github-account>/supplier-monitoring.git
+    $ git clone git@github.com:<your-github-account>/supplier.git
     ```
 8. To ensure that upstream changes to the parent repository may be tracked, add the upstream locally as well.
     ```
-    $ git remote add upstream git@github.com:jayakrishnanj/supplier-monitoring.git
+    $ git remote add upstream git@github.com:jayakrishnanj/supplier.git
     ```
 
 9. Update your the configuration located in the `/blt/blt.yml` file to match your site's needs. See [configuration files](#important-configuration-files) for other important configuration files.
@@ -136,6 +136,6 @@ BLT uses a number of configuration (`.yml` or `.json`) files to define and custo
 ## Resources
 
 * JIRA - https://acquiaps.atlassian.net/secure/RapidBoard.jspa?rapidView=797&projectKey=SMS
-* GitHub - git@github.com:jayakrishnanj/supplier-monitoring.git
+* GitHub - git@github.com:jayakrishnanj/supplier.git
 * Acquia Cloud subscription - https://cloud.acquia.com/app/develop/applications/d17f1f44-5baa-4b2d-aea6-b2ce232256c1
-* TravisCI - #TRAVIS_URL
+* TravisCI - https://travis-ci.org/jayakrishnanj/supplier
