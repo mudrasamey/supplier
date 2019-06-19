@@ -1,0 +1,21 @@
+uuid: 5b7bdbb0-2aff-4421-a924-b3d499a8131c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_availability
+    - node.type.supplier_resource_feedback
+  module:
+    - options
+id: node.supplier_resource_feedback.field_resource_availability
+field_name: field_resource_availability
+entity_type: node
+bundle: supplier_resource_feedback
+label: Availability
+description: 'Does the doesn''t take PTOs too often, or for too long especially for unreasonable reasons. Also implies the resource doesn''t disappear from desk unannounced during project hours. The resource is flexible to join calls late evening. '
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

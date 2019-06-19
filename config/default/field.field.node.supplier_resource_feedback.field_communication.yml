@@ -1,0 +1,21 @@
+uuid: 616c62b2-33e6-4fee-a586-bc3b0e2b238f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_communication
+    - node.type.supplier_resource_feedback
+  module:
+    - options
+id: node.supplier_resource_feedback.field_communication
+field_name: field_communication
+entity_type: node
+bundle: supplier_resource_feedback
+label: Communication
+description: 'Does the resource do a good job in explaining his thoughts, on calls, on tickets? Can he/she articulate their questions clearly?'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

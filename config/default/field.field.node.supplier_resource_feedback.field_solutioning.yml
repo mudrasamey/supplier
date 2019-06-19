@@ -1,0 +1,21 @@
+uuid: 9a6cd154-23cc-4327-a91b-9c25e1977f8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_solutioning
+    - node.type.supplier_resource_feedback
+  module:
+    - options
+id: node.supplier_resource_feedback.field_solutioning
+field_name: field_solutioning
+entity_type: node
+bundle: supplier_resource_feedback
+label: Solutioning
+description: 'How good was the resource in being able to figure out solutions to problems, in being able to translate requirements into technical architecture?'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

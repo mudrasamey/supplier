@@ -1,12 +1,12 @@
-uuid: 487ee1a8-1177-46a8-9873-6be17b06ad10
+uuid: ddc3664e-7b0a-4a68-8a1e-c5bb1345c8b8
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - options
-id: node.field_overall_supplier_rating
-field_name: field_overall_supplier_rating
+id: node.field_overall_rating
+field_name: field_overall_rating
 entity_type: node
 type: list_float
 settings:

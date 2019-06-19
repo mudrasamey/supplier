@@ -1,0 +1,21 @@
+uuid: 576a5367-25bc-4ed4-9d97-584dd05e2300
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_overall_rating
+    - node.type.supplier_resource_feedback
+  module:
+    - options
+id: node.supplier_resource_feedback.field_overall_rating
+field_name: field_overall_rating
+entity_type: node
+bundle: supplier_resource_feedback
+label: 'Overall Rating for resource on this project'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

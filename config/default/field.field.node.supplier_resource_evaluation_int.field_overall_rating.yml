@@ -1,0 +1,21 @@
+uuid: cca963c0-8f96-4fb5-9057-1c72784774cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_overall_rating
+    - node.type.supplier_resource_evaluation_int
+  module:
+    - options
+id: node.supplier_resource_evaluation_int.field_overall_rating
+field_name: field_overall_rating
+entity_type: node
+bundle: supplier_resource_evaluation_int
+label: 'Overall Rating'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

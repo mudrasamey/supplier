@@ -5,11 +5,12 @@ dependencies:
   config:
     - core.entity_view_display.comment.comment_node_supplier_feedback.default
     - field.field.node.supplier_feedback.comment_node_supplier_feedback
+    - field.field.node.supplier_feedback.field_additional_notes
     - field.field.node.supplier_feedback.field_estimation
     - field.field.node.supplier_feedback.field_handling_scope
     - field.field.node.supplier_feedback.field_in_budget
     - field.field.node.supplier_feedback.field_in_time
-    - field.field.node.supplier_feedback.field_overall_supplier_rating
+    - field.field.node.supplier_feedback.field_overall_rating
     - field.field.node.supplier_feedback.field_proactiveness_deligence
     - field.field.node.supplier_feedback.field_resource_availability
     - field.field.node.supplier_feedback.field_supplier_feedback_project
@@ -20,6 +21,7 @@ dependencies:
   module:
     - comment
     - options
+    - text
     - user
 id: node.supplier_feedback.default
 targetEntityType: node
@@ -29,56 +31,63 @@ content:
   comment_node_supplier_feedback:
     label: hidden
     type: comment_default
-    weight: 20
+    weight: 2
     settings:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
     region: content
+  field_additional_notes:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_estimation:
-    weight: 105
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   field_handling_scope:
-    weight: 106
+    weight: 8
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   field_in_budget:
-    weight: 107
+    weight: 9
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   field_in_time:
-    weight: 108
+    weight: 10
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
-  field_overall_supplier_rating:
-    weight: 102
+  field_overall_rating:
+    weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   field_proactiveness_deligence:
-    weight: 104
+    weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   field_resource_availability:
-    weight: 103
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -102,23 +111,23 @@ content:
     region: content
   field_the_above_feedback_does_no:
     label: above
-    weight: 11
+    weight: 13
     type: boolean
     settings:
-      format: default
-      format_custom_false: ''
+      format: yes-no
       format_custom_true: ''
+      format_custom_false: ''
     third_party_settings: {  }
     region: content
   field_turn_around_time_staffing:
-    weight: 101
+    weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   links:
-    weight: 100
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -4,9 +4,17 @@ status: true
 dependencies:
   config:
     - field.field.node.supplier_resource_feedback.field_additional_notes
+    - field.field.node.supplier_resource_feedback.field_attention_to_detail
+    - field.field.node.supplier_resource_feedback.field_communication
+    - field.field.node.supplier_resource_feedback.field_drupal_coding_skills
+    - field.field.node.supplier_resource_feedback.field_integrity
+    - field.field.node.supplier_resource_feedback.field_overall_rating
+    - field.field.node.supplier_resource_feedback.field_resource_availability
+    - field.field.node.supplier_resource_feedback.field_solutioning
     - field.field.node.supplier_resource_feedback.field_supplier_res_fb_project
     - field.field.node.supplier_resource_feedback.field_supplier_res_fb_resource
     - field.field.node.supplier_resource_feedback.field_the_above_feedback_does_no
+    - field.field.node.supplier_resource_feedback.field_velocity
     - node.type.supplier_resource_feedback
   module:
     - options
@@ -18,11 +26,60 @@ bundle: supplier_resource_feedback
 mode: default
 content:
   field_additional_notes:
-    weight: 101
+    weight: 10
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_attention_to_detail:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_communication:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_drupal_coding_skills:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_integrity:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_overall_rating:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_resource_availability:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_solutioning:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
     region: content
   field_supplier_res_fb_project:
     label: above
@@ -43,13 +100,23 @@ content:
   field_the_above_feedback_does_no:
     label: above
     weight: 11
-    type: list_default
+    type: boolean
+    settings:
+      format: yes-no
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    region: content
+  field_velocity:
+    weight: 3
+    label: above
     settings: {  }
     third_party_settings: {  }
+    type: list_key
     region: content
   links:
-    weight: 100
+    weight: 12
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }
