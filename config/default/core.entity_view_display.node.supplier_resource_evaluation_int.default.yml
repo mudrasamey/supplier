@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.supplier_resource_evaluation_int.field_additional_notes
     - field.field.node.supplier_resource_evaluation_int.field_evaluation_resource
     - field.field.node.supplier_resource_evaluation_int.field_interviewed_for_project
+    - field.field.node.supplier_resource_evaluation_int.field_overall_rating
     - field.field.node.supplier_resource_evaluation_int.field_the_above_feedback_does_no
     - node.type.supplier_resource_evaluation_int
   module:
@@ -20,13 +21,16 @@ mode: default
 content:
   field_accepted_for_current_proje:
     label: above
-    weight: 2
-    type: list_default
-    settings: {  }
+    weight: 1
+    type: boolean
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
     region: content
   field_additional_notes:
-    weight: 101
+    weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -42,22 +46,32 @@ content:
     region: content
   field_interviewed_for_project:
     label: above
-    weight: 4
+    weight: 2
     type: entity_reference_label
     settings:
       link: true
     third_party_settings: {  }
     region: content
+  field_overall_rating:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
   field_the_above_feedback_does_no:
     label: above
-    weight: 5
-    type: list_default
-    settings: {  }
+    weight: 6
+    type: boolean
+    settings:
+      format: yes-no
+      format_custom_true: ''
+      format_custom_false: ''
     third_party_settings: {  }
     region: content
   links:
-    weight: 100
+    weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }

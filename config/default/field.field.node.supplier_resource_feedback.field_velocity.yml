@@ -1,0 +1,21 @@
+uuid: 1d2cd110-4029-4cd0-abf9-195f92b43cb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_velocity
+    - node.type.supplier_resource_feedback
+  module:
+    - options
+id: node.supplier_resource_feedback.field_velocity
+field_name: field_velocity
+entity_type: node
+bundle: supplier_resource_feedback
+label: Velocity
+description: 'How fast does the resource get stuff done?'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

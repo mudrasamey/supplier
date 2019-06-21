@@ -1,20 +1,20 @@
-uuid: 45b0b7ff-7ce1-4868-bf7d-10fd618b3cdf
+uuid: 2c884609-b6e0-4865-883e-c83b6466e23e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_overall_supplier_rating
+    - field.storage.node.field_overall_rating
     - node.type.supplier_feedback
   module:
     - options
-id: node.supplier_feedback.field_overall_supplier_rating
-field_name: field_overall_supplier_rating
+id: node.supplier_feedback.field_overall_rating
+field_name: field_overall_rating
 entity_type: node
 bundle: supplier_feedback
 label: 'Overall Rating for supplier on this project'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

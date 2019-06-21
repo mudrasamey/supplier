@@ -1,0 +1,21 @@
+uuid: 0db921e0-c917-4fa9-8688-79887d609261
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attention_to_detail
+    - node.type.supplier_resource_feedback
+  module:
+    - options
+id: node.supplier_resource_feedback.field_attention_to_detail
+field_name: field_attention_to_detail
+entity_type: node
+bundle: supplier_resource_feedback
+label: 'Attention to detail'
+description: 'Does the resource have good attention to detail? Does he ask the right questions and get this clarified? Does he ensure small things in tickets are not missed out?'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

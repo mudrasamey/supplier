@@ -1,0 +1,21 @@
+uuid: ff1be0c9-5e34-4029-8fbf-4ac5f9bd7b4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_drupal_coding_skills
+    - node.type.supplier_resource_feedback
+  module:
+    - options
+id: node.supplier_resource_feedback.field_drupal_coding_skills
+field_name: field_drupal_coding_skills
+entity_type: node
+bundle: supplier_resource_feedback
+label: 'Drupal Coding Skills'
+description: 'How good was the resource with his technical knowledge and know-how? If TA, does the resource do a good job at grooming and ticket triaging?'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

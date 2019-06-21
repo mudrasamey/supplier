@@ -1,0 +1,21 @@
+uuid: 0ffba00b-d2ed-4de3-b9c6-3f045cace684
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_integrity
+    - node.type.supplier_resource_feedback
+  module:
+    - options
+id: node.supplier_resource_feedback.field_integrity
+field_name: field_integrity
+entity_type: node
+bundle: supplier_resource_feedback
+label: Integrity
+description: 'Does the resource do the amount of work that justifies the hours logged? Is the resource honest about his availability? Do the timesheets match the actual hours spent? Do the expense reports indicate the actual amounts spent?'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float
