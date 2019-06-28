@@ -1,0 +1,6 @@
+name: SupplierMonitoring
+type: module
+description: "Provides basic customizations for Supplier site."
+# version: VERSION
+package: SupplierMonitoring
+core: '8.x'

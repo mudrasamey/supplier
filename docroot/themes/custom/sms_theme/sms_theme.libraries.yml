@@ -6,3 +6,8 @@ star-rating:
     js/star-rating.js: {}
   dependencies:
     - core/jquery
+
+global-styling:
+  css:
+    theme:
+      css/basestyle.css: {}
