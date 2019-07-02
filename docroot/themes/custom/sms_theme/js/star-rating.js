@@ -1,6 +1,7 @@
 (function ($, Drupal) {
 
   $(document).ready(function () {
+
     function getStars(rating) {
       // Round to nearest half
       rating = Math.round(rating * 2) / 2;
@@ -29,6 +30,21 @@
       console.log(rating);
       var rating_html = getStars(rating);
       $(this).html(rating_html);
+    });
+
+    // Add default styling to required element.
+    $('.required .form-radios').addClass("required-stars");
+
+    $('.required .form-radios input').each(function(){
+      if ($(this).is(':checked')) {
+        $(this).parent().removeClass("required-stars");
+      }
+    });
+
+    $('.required .form-radios input').click(function () {
+      if ($(this).prop("checked")) {
+        $(this).parent().removeClass("required-stars");
+      }
     });
 
   });

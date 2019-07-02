@@ -47,6 +47,10 @@
   color: orange;
 }
 
+.required-stars .rating__icon--star {
+  color: #ddd;
+}
+
 /* if any input is checked, make its following siblings grey */
 .form-radios input:checked ~ label .rating__icon--star {
   color: #ddd;
