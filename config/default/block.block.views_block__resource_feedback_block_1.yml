@@ -1,0 +1,32 @@
+uuid: 3ee2d4ac-2a9c-4dec-b6b0-7e7f57a8b461
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.resource_feedback
+  module:
+    - node
+    - views
+  theme:
+    - sms_theme
+id: views_block__resource_feedback_block_1
+theme: sms_theme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:resource_feedback-block_1'
+settings:
+  id: 'views_block:resource_feedback-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      supplier_resource: supplier_resource
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

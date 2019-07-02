@@ -27,7 +27,11 @@
 
     $( ".field--type-list-float .field__item" ).each(function() {
       var rating = $(this).text();
-      console.log(rating);
+      var rating_html = getStars(rating);
+      $(this).html(rating_html);
+    });
+    $( ".star-rating-rows .field-content" ).each(function() {
+      var rating = $(this).text();
       var rating_html = getStars(rating);
       $(this).html(rating_html);
     });

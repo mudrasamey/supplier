@@ -1,0 +1,23 @@
+.nav-tabs-custom{
+  min-height:500px;
+  padding:20px;
+}
+
+.field-group-fieldset, .customised-fieldset{
+  padding: 20px;
+  border: 1px solid #eeeeee;
+}
+
+.field-group-fieldset legend ,.customised-fieldset legend{
+  width: auto;
+  margin-bottom: 0;
+  border: 0px;
+}
+.star-rating-rows .views-field {
+  font-size: 16px;
+}
+.gray-bg.views-row {
+  background-color: #eeeeee;
+  padding: 10px;
+  margin: 10px 0;
+}

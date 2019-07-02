@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Provides basic customizations for Supplier site.
+ */
+
+/**
+ * Implements hook_form_alter().
+ */
+function suppliermonitoring_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  if ($form["#form_id"] == "views_exposed_form" && $form["#id"] == "views-exposed-form-resource-listing-page-1") {
+    $query = Drupal::database()->select('node', 'n');
+    $query->join('node_field_data', 'nfd', 'n.nid = nfd.nid AND nfd.status = :status', [':status' => 1]);
+    $query->fields('nfd', ['nid', 'title']);
+    $query->condition('nfd.type', 'supplier');
+    $result = $query->execute()->fetchAllKeyed();
+    $supplier_default = Drupal::request()->request->get('supplier');
+    $form["supplier"] = [
+      '#type' => 'select',
+      '#title' => t('Supplier'),
+      '#options' => ['' => "-Any-"] + $result,
+      '#default_value' => isset($supplier_default) ? $supplier_default : '',
+    ];
+  }
+}
