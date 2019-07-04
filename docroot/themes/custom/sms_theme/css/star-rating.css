@@ -1,5 +1,5 @@
 /* Converts radio buttons to half star rating. */
-.form-radios {
+.field--type-list-float .form-radios {
   display: inline-flex;
 }
 
@@ -9,34 +9,34 @@
 }
 
 /* hide radio inputs */
-.form-radios input {
+.field--type-list-float .form-radios input {
   position: absolute !important;
   left: -9999px !important;
 }
 
 /* set icon padding and size */
-.form-radios label {
+.field--type-list-float .form-radios label {
   cursor: pointer;
   /* if you change the left/right padding, update the margin-right property of .rating__label--half as well. */
   padding: 0 0.1em;
   font-size: 2.5rem;
 }
 
-.form-radios label:first-child {
+.field--type-list-float .form-radios label:first-child {
   display: none;
 }
 
-.required .form-radios label:first-child {
+.field--type-list-float .required .form-radios label:first-child {
   display: block;
 }
 
 /* add padding and positioning to half star labels */
-.form-composite:not(.required) .form-radios label:nth-child(4n-1) {
+.field--type-list-float .form-composite:not(.required) .form-radios label:nth-child(4n-1) {
   padding-right: 0;
   margin-right: -0.6em;
   z-index: 2;
 }
-.form-composite.required .form-radios label:nth-child(4n-3) {
+.field--type-list-float .form-composite.required .form-radios label:nth-child(4n-3) {
   padding-right: 0;
   margin-right: -0.6em;
   z-index: 2;
