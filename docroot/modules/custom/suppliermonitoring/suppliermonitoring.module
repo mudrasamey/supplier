@@ -5,10 +5,12 @@
  * Provides basic customizations for Supplier site.
  */
 
+use Drupal\Core\Form\FormStateInterface;
+
 /**
  * Implements hook_form_alter().
  */
-function suppliermonitoring_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+function suppliermonitoring_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 
   if ($form["#form_id"] == "views_exposed_form" && $form["#id"] == "views-exposed-form-resource-listing-page-1") {
     $query = Drupal::database()->select('node', 'n');
