@@ -44,6 +44,7 @@
         "drupal/devel": "^2.0.0",
         "drupal/druadmin_lte_theme": "1.0.0",
         "drupal/features": "^3.8.0",
+        "drupal/field_collection": "^1.0@alpha",
         "drupal/field_group": "^3.0",
         "drupal/inline_entity_form": "1.0.0-rc1",
         "drupal/memcache": "2.0-alpha7",

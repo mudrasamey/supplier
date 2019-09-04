@@ -26,4 +26,5 @@ hidden:
   field_additional_notes: true
   field_evaluation_resource: true
   field_interviewed_for_project: true
+  field_overall_rating: true
   field_the_above_feedback_does_no: true

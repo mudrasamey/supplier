@@ -1,0 +1,28 @@
+uuid: c501697e-42a1-41b1-b8a1-e6c360229d4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_supplier_resource
+    - field_collection.field_collection.field_resources
+    - node.type.supplier_resource
+id: field_collection_item.field_resources.field_supplier_resource
+field_name: field_supplier_resource
+entity_type: field_collection_item
+bundle: field_resources
+label: 'Supplier resource'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      supplier_resource: supplier_resource
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

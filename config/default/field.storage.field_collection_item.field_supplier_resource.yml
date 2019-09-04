@@ -1,0 +1,20 @@
+uuid: c4ff78eb-c2ff-4ce2-bf90-3ff4a11835d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_collection
+    - node
+id: field_collection_item.field_supplier_resource
+field_name: field_supplier_resource
+entity_type: field_collection_item
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

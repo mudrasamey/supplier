@@ -1,0 +1,23 @@
+uuid: 3d9d3182-5191-4dc4-ae08-6a1ff2cb6bf1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_allocation_percentage
+    - field_collection.field_collection.field_resources
+id: field_collection_item.field_resources.field_allocation_percentage
+field_name: field_allocation_percentage
+entity_type: field_collection_item
+bundle: field_resources
+label: 'Allocation Percentage'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 100
+  prefix: ''
+  suffix: '%'
+field_type: integer

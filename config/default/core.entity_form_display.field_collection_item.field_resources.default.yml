@@ -1,0 +1,49 @@
+uuid: ad0a71c6-df79-42de-81a2-f12ea9114148
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_resources.field_allocation_end_date
+    - field.field.field_collection_item.field_resources.field_allocation_percentage
+    - field.field.field_collection_item.field_resources.field_role
+    - field.field.field_collection_item.field_resources.field_supplier_resource
+    - field_collection.field_collection.field_resources
+  module:
+    - datetime
+id: field_collection_item.field_resources.default
+targetEntityType: field_collection_item
+bundle: field_resources
+mode: default
+content:
+  field_allocation_end_date:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_allocation_percentage:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_role:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_supplier_resource:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden: {  }
