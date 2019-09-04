@@ -1,0 +1,23 @@
+uuid: 379b34ab-18de-49ca-881e-a51ce204e5fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resources
+    - node.type.project
+  module:
+    - field_collection
+id: node.project.field_resources
+field_name: field_resources
+entity_type: node
+bundle: project
+label: Resources
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+  - {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_collection

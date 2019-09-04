@@ -1,0 +1,52 @@
+uuid: 9e81507f-a2d6-4e9d-8904-f038d96dcd53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_resources.field_allocation_end_date
+    - field.field.field_collection_item.field_resources.field_allocation_percentage
+    - field.field.field_collection_item.field_resources.field_role
+    - field.field.field_collection_item.field_resources.field_supplier_resource
+    - field_collection.field_collection.field_resources
+  module:
+    - datetime
+id: field_collection_item.field_resources.default
+targetEntityType: field_collection_item
+bundle: field_resources
+mode: default
+content:
+  field_allocation_end_date:
+    weight: 1
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_allocation_percentage:
+    weight: 3
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_role:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_supplier_resource:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

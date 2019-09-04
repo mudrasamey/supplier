@@ -1,0 +1,24 @@
+uuid: ba066f1a-33b7-407b-bcb5-488aa3dd70a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_allocation_end_date
+    - field_collection.field_collection.field_resources
+  module:
+    - datetime
+id: field_collection_item.field_resources.field_allocation_end_date
+field_name: field_allocation_end_date
+entity_type: field_collection_item
+bundle: field_resources
+label: 'Allocation End date'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: relative
+    default_date: '+60 days'
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "84f8d4f884ea401ecf6c215f60bc3542",
+    "content-hash": "77443a1aeaa08d2c4de71ae00e3d40dd",
     "packages": [
         {
             "name": "acquia/blt",
@@ -883,7 +883,7 @@
             "version": "v1.8.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:kenwheeler/slick.git",
+                "url": "https://github.com/kenwheeler/slick.git",
                 "reference": "0f40c9d6a02a5c08b5f4dd80fdada3a854a59bee"
             },
             "dist": {
@@ -3313,7 +3313,7 @@
             "version": "8.3.4",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/coder.git",
+                "url": "https://git.drupalcode.org/project/coder.git",
                 "reference": "0a274321f4930f186d9f246783f0b4d743501cf8"
             },
             "require": {
@@ -5017,6 +5017,73 @@
             "homepage": "https://www.drupal.org/project/features",
             "support": {
                 "source": "https://git.drupalcode.org/project/features"
+            }
+        },
+        {
+            "name": "drupal/field_collection",
+            "version": "1.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/field_collection.git",
+                "reference": "8.x-1.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/field_collection-8.x-1.0-alpha1.zip",
+                "reference": "8.x-1.0-alpha1",
+                "shasum": "4d529021cf113e3026b3fd88ac2571dc72e70e8d"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha1",
+                    "datestamp": "1460462939",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "RenatoG",
+                    "homepage": "https://www.drupal.org/user/3326031"
+                },
+                {
+                    "name": "fago",
+                    "homepage": "https://www.drupal.org/user/16747"
+                },
+                {
+                    "name": "jmuzz",
+                    "homepage": "https://www.drupal.org/user/2607886"
+                },
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
+                    "name": "nedjo",
+                    "homepage": "https://www.drupal.org/user/4481"
+                },
+                {
+                    "name": "ram4nd",
+                    "homepage": "https://www.drupal.org/user/601534"
+                }
+            ],
+            "description": "Provides a field collection field, to which any number of fields can be attached.",
+            "homepage": "https://www.drupal.org/project/field_collection",
+            "support": {
+                "source": "https://git.drupalcode.org/project/field_collection"
             }
         },
         {
@@ -15027,7 +15094,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "drupal/field_collection": 15
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
