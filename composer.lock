@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "77443a1aeaa08d2c4de71ae00e3d40dd",
+    "content-hash": "b8d164531a2ad1bcfa7ba9a673f3808c",
     "packages": [
         {
             "name": "acquia/blt",
@@ -3520,6 +3520,9 @@
                     "services": {
                         "drush.services.yml": "^9"
                     }
+                },
+                "patches_applied": {
+                    "Shortcut set issue fix": "./patches/shortcut-set-issue-fix.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

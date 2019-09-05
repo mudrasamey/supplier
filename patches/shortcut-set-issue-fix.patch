@@ -1,0 +1,15 @@
+diff --git a/config_split.install b/config_split.install
+index 3c2ef38..496e7f5 100644
+--- a/config_split.install
++++ b/config_split.install
+@@ -11,3 +11,10 @@
+ function config_split_update_8001() {
+   \Drupal::getContainer()->get('module_installer')->install(['config_filter']);
+ }
++
++function config_split_install() {
++  \Drupal::entityManager()
++    ->getStorage("shortcut_set")
++    ->load("default")
++    ->delete();
++}
