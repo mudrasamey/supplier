@@ -29,4 +29,5 @@ hidden:
   field_mavenlink_workspace_id: true
   field_project_manager: true
   field_project_manager_s_: true
+  field_resources: true
   field_start_date: true

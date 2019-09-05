@@ -39,7 +39,7 @@
         "drupal/acquia_purge": "^1.0-beta3",
         "drupal/admin_theme": "1.0-beta1",
         "drupal/cog": "^1.0.0",
-        "drupal/config_split": "^1.0.0",
+        "drupal/config_split": "^1.4",
         "drupal/core": "^8.6.0",
         "drupal/devel": "^2.0.0",
         "drupal/druadmin_lte_theme": "1.0.0",
@@ -64,7 +64,11 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
-        "patches": [],
+        "patches": {
+            "drupal/config_split": {
+                "Shortcut set issue fix": "./patches/shortcut-set-issue-fix.patch"
+            }
+        },
         "installer-types": ["bower-asset", "npm-asset"],
         "installer-paths": {
             "docroot/core": ["type:drupal-core"],
