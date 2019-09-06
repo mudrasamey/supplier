@@ -28,3 +28,20 @@
 .login-box-body, .register-box-body{
   padding:0px 20px!important;
 }
+#edit-field-resources-wrapper .form-wrapper {
+  width: 25%;
+  float: left;
+  padding-right: 25px;
+  margin-top:15px;
+}
+
+#edit-field-resources-wrapper .form-wrapper h4{
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0;
+  margin-bottom: 10px;
+  float: left;
+}
+#edit-field-resources-wrapper .form-wrapper .form-group, #edit-field-resources-wrapper .form-wrapper .form-item,#edit-field-resources-wrapper .form-actions{
+  margin: 0;
+}
