@@ -1,0 +1,8 @@
+uuid: 99f6e5ef-a996-44c7-ac5e-54fe85486da4
+langcode: en
+status: true
+dependencies: {  }
+id: project-and-resource
+label: 'Project and Resource'
+description: ''
+locked: false

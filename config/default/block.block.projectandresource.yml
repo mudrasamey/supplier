@@ -1,0 +1,25 @@
+uuid: 68ac5f1b-760d-49d4-93fa-b5c1d7bbef0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.project-and-resource
+  module:
+    - system
+  theme:
+    - sms_theme
+id: projectandresource
+theme: sms_theme
+region: sidebar
+weight: -9
+provider: null
+plugin: 'system_menu_block:project-and-resource'
+settings:
+  id: 'system_menu_block:project-and-resource'
+  label: 'Project and Resource'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
