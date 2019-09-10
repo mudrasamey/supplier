@@ -6,7 +6,6 @@ dependencies:
     - field.storage.node.field_supplier_resource_company
     - field.storage.node.field_supplier_resource_role
     - node.type.supplier_resource
-    - system.menu.listing
     - taxonomy.vocabulary.roles
   module:
     - node
@@ -463,7 +462,7 @@ display:
       display_extenders: {  }
       path: resource-listing
       menu:
-        type: normal
+        type: none
         title: 'Resource Listing'
         description: ''
         expanded: false
