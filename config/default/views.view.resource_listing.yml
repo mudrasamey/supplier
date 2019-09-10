@@ -277,7 +277,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: '='
+          operator: contains
           value: ''
           group: 1
           exposed: true
@@ -461,6 +461,15 @@ display:
     display_options:
       display_extenders: {  }
       path: resource-listing
+      menu:
+        type: none
+        title: 'Resource Listing'
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: listing
     cache_metadata:
       max-age: -1
       contexts:
