@@ -26,15 +26,13 @@
         }
     },
     "config": {
-        "sort-packages": true,
-        "optimize-autoloader": true,
-        "apcu-autoloader": true
+        "sort-packages": true
     },
     "require": {
-        "php": ">=7.1",
         "acquia/blt": "^10.0.0",
         "acquia/drupal-spec-tool": "^2.0.0",
         "acquia/lightning": "^3.1.0",
+        "acquia/memcache-settings": "*",
         "drupal/acquia_connector": "^1.5.0",
         "drupal/acquia_purge": "^1.0-beta3",
         "drupal/admin_theme": "1.0-beta1",
@@ -47,12 +45,12 @@
         "drupal/field_collection": "^1.0@alpha",
         "drupal/field_group": "^3.0",
         "drupal/inline_entity_form": "1.0.0-rc1",
-        "drupal/memcache": "2.0-alpha7",
         "drupal/migrate_upgrade": "3.0.0",
         "drupal/qa_accounts": "^1.0.0-alpha1",
         "drupal/seckit": "^1.0.0-alpha2",
         "drupal/shield": "^1.2.0",
-        "drupal/views_autocomplete_filters": "1.2.0"
+        "drupal/views_autocomplete_filters": "1.2.0",
+        "php": ">=7.1"
     },
     "require-dev": {
         "acquia/blt-require-dev": "^10.0.0-alpha1",
@@ -69,17 +67,40 @@
                 "Shortcut set issue fix": "./patches/shortcut-set-issue-fix.patch"
             }
         },
-        "installer-types": ["bower-asset", "npm-asset"],
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
         "installer-paths": {
-            "docroot/core": ["type:drupal-core"],
-            "docroot/modules/contrib/{$name}": ["type:drupal-module"],
-            "docroot/modules/custom/{$name}": ["type:drupal-custom-module"],
-            "docroot/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "docroot/profiles/custom/{$name}": ["type:drupal-custom-profile"],
-            "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
-            "docroot/themes/custom/{$name}": ["type:drupal-custom-theme"],
-            "docroot/libraries/{$name}": ["type:drupal-library", "type:bower-asset", "type:npm-asset"],
-            "drush/Commands/{$name}": ["type:drupal-drush"]
+            "docroot/core": [
+                "type:drupal-core"
+            ],
+            "docroot/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "docroot/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "docroot/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "docroot/profiles/custom/{$name}": [
+                "type:drupal-custom-profile"
+            ],
+            "docroot/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "docroot/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
+            "drush/Commands/{$name}": [
+                "type:drupal-drush"
+            ]
         },
         "drupal-scaffold": {
             "initial": {
