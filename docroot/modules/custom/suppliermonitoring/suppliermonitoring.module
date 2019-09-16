@@ -12,7 +12,7 @@ use Drupal\field_collection\Entity\FieldCollectionItem;
  * Implements hook_form_alter().
  */
 function suppliermonitoring_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if ($form["#form_id"] == "views_exposed_form" && $form["#id"] == "views-exposed-form-resource-listing-page-1") {
+  if ($form["#form_id"] == "views_exposed_form" && ($form["#id"] == "views-exposed-form-resource-listing-page-1" || $form["#id"] == 'views-exposed-form-resource-availability-page-1')) {
     $query = Drupal::database()->select('node', 'n');
     $query->join('node_field_data', 'nfd', 'n.nid = nfd.nid AND nfd.status = :status', [':status' => 1]);
     $query->fields('nfd', ['nid', 'title']);
@@ -40,10 +40,76 @@ function suppliermonitoring_views_data_alter(array &$data) {
       'id' => 'node_resource_availability',
     ],
   ];
+  $data['node']['supplierwiseavailability'] = [
+    'title' => t('Supplier Wise Resource Availability'),
+    'field' => [
+      'title' => t('Supplier Wise Resource Availability'),
+      'help' => t('Supplier Wise Resource Availability.'),
+      'id' => 'node_supplier_wise_resource_availability',
+    ],
+  ];
+  $data['taxonomy_term_field_data']['term_availability'] = [
+    'title' => t('Resource Role Availability'),
+    'field' => [
+      'title' => t('Resource Role Availability'),
+      'help' => t('Resource Rold Availability.'),
+      'id' => 'term_data_resource_availability',
+    ],
+  ];
 }
 
 /**
- * Implements hook_views_data_alter().
+ * Implements a helper function to calculate availabilty based on role id.
+ */
+function suppliermonitoring_term_resource_availability_calculator($tid) {
+  $resource_available = $total = 0;
+  $connection = \Drupal::database();
+  $query = $connection->select('node__field_supplier_resource_role', 'r');
+  $query->join('node_field_data', 'n', 'n.nid = r.entity_id');
+  $query->condition('r.field_supplier_resource_role_target_id', $tid);
+  $query->fields('n', ['nid']);
+  $query->condition('n.status', 1);
+  $query->condition('n.type', 'supplier_resource');
+  $results = $query->execute()->fetchAll();
+
+  foreach ($results as $result) {
+    $availability = 0;
+    $total++;
+    $availability = suppliermonitoring_resource_availability_calculator($result->nid);
+    if ($availability > 0) {
+      $resource_available++;
+    }
+  }
+  return "$resource_available out of $total";
+}
+
+/**
+ * Implements a helper function to calculate availabilty based on Supplier id.
+ */
+function suppliermonitoring_supplier_wise_resource_availability_calculator($nid) {
+  $resource_available = $total = 0;
+  $connection = \Drupal::database();
+  $query = $connection->select('node__field_supplier_resource_company', 's');
+  $query->join('node_field_data', 'n', 'n.nid = s.entity_id');
+  $query->condition('s.field_supplier_resource_company_target_id', $nid);
+  $query->fields('n', ['nid']);
+  $query->condition('n.status', 1);
+  $query->condition('n.type', 'supplier_resource');
+  $results = $query->execute()->fetchAll();
+
+  foreach ($results as $result) {
+    $availability = 0;
+    $total++;
+    $availability = suppliermonitoring_resource_availability_calculator($result->nid);
+    if ($availability > 0) {
+      $resource_available++;
+    }
+  }
+  return "$resource_available out of $total";
+}
+
+/**
+ * Implements a helper function to calculate availabilty of resource by nid.
  */
 function suppliermonitoring_resource_availability_calculator($nid) {
   $connection = \Drupal::database();
@@ -63,5 +129,5 @@ function suppliermonitoring_resource_availability_calculator($nid) {
       }
     }
   }
-  return $allocation;
+  return 100 - $allocation;
 }

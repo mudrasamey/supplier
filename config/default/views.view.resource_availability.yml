@@ -255,7 +255,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Resource Allocation'
+          label: 'Resource Availability'
           exclude: false
           alter:
             alter_text: false

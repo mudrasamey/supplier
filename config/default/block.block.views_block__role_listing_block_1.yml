@@ -1,0 +1,30 @@
+uuid: 3770e100-dd73-4b43-963b-5bd90ab8c52d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.role_listing
+  module:
+    - system
+    - views
+  theme:
+    - sms_theme
+id: views_block__role_listing_block_1
+theme: sms_theme
+region: content
+weight: -9
+provider: null
+plugin: 'views_block:role_listing-block_1'
+settings:
+  id: 'views_block:role_listing-block_1'
+  label: 'Role Wise Avaiability'
+  provider: views
+  label_display: visible
+  views_label: 'Role Wise Avaiability'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /resource-availability
+    negate: false
+    context_mapping: {  }

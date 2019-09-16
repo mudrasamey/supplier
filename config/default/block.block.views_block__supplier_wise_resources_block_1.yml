@@ -1,0 +1,30 @@
+uuid: 770e6496-e05d-463e-b488-0dcc56949f84
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.supplier_wise_resources
+  module:
+    - system
+    - views
+  theme:
+    - sms_theme
+id: views_block__supplier_wise_resources_block_1
+theme: sms_theme
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:supplier_wise_resources-block_1'
+settings:
+  id: 'views_block:supplier_wise_resources-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /resource-availability
+    negate: false
+    context_mapping: {  }
