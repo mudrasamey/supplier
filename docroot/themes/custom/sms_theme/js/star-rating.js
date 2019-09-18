@@ -5,37 +5,37 @@
   Drupal.behaviors.starJS = {
     attach: function (context, settings) {
 
-        function getStars(rating) {
-          if($.isNumeric(rating)) {
-            // Round to nearest half
-            rating = Math.round(rating * 2) / 2;
-            let output = [];
+      function getStars(rating) {
+        if($.isNumeric(rating)) {
+          // Round to nearest half
+          rating = Math.round(rating * 2) / 2;
+          let output = [];
 
-            // Append all the filled whole stars
-            for (var i = rating; i >= 1; i--) {
-              output.push('<i class="fa fa-star" aria-hidden="true" style="color: orange;"></i>&nbsp;');
-            }
-
-            // If there is a half a star, append it
-            if (i == 0.5) {
-              output.push('<i class="fa fa-star-half-o" aria-hidden="true" style="color: orange;"></i>&nbsp;');
-            }
-
-            // Fill the empty stars
-            for (let i = (5 - rating); i >= 1; i--) {
-              output.push('<i class="fa fa-star-o" aria-hidden="true" style="color: orange;"></i>&nbsp;');
-            }
-
-            return output.join('');
+          // Append all the filled whole stars
+          for (var i = rating; i >= 1; i--) {
+            output.push('<i class="fa fa-star" aria-hidden="true" style="color: orange;"></i>&nbsp;');
           }
+
+          // If there is a half a star, append it
+          if (i == 0.5) {
+            output.push('<i class="fa fa-star-half-o" aria-hidden="true" style="color: orange;"></i>&nbsp;');
+          }
+
+          // Fill the empty stars
+          for (let i = (5 - rating); i >= 1; i--) {
+            output.push('<i class="fa fa-star-o" aria-hidden="true" style="color: orange;"></i>&nbsp;');
+          }
+
+          return output.join('');
         }
+      }
 
 
-        $( ".view-resource-availability td.views-field-field-overall-rating" ).each(function() {
-          var rating = $(this).text();
-          var rating_html = getStars(rating);
-          $(this).html(rating_html);
-        });
+      $( ".view-resource-availability td.views-field-field-overall-rating" ).each(function() {
+        var rating = $(this).text();
+        var rating_html = getStars(rating);
+        $(this).html(rating_html);
+      });
 
       if (typeof context['location'] !== 'undefined') { // Only fire on document load.
 
