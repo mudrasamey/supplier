@@ -6,13 +6,13 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\field_collection\Entity\FieldCollectionItem;
 
 /**
  * Implements hook_form_alter().
  */
 function suppliermonitoring_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-
-  if ($form["#form_id"] == "views_exposed_form" && $form["#id"] == "views-exposed-form-resource-listing-page-1") {
+  if ($form["#form_id"] == "views_exposed_form" && ($form["#id"] == "views-exposed-form-resource-listing-page-1" || $form["#id"] == 'views-exposed-form-resource-availability-page-1')) {
     $query = Drupal::database()->select('node', 'n');
     $query->join('node_field_data', 'nfd', 'n.nid = nfd.nid AND nfd.status = :status', [':status' => 1]);
     $query->fields('nfd', ['nid', 'title']);
@@ -26,4 +26,108 @@ function suppliermonitoring_form_alter(&$form, FormStateInterface $form_state, $
       '#default_value' => isset($supplier_default) ? $supplier_default : '',
     ];
   }
+}
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function suppliermonitoring_views_data_alter(array &$data) {
+  $data['node']['availability'] = [
+    'title' => t('Resource Availability'),
+    'field' => [
+      'title' => t('Resource Availability'),
+      'help' => t('Resource Availability.'),
+      'id' => 'node_resource_availability',
+    ],
+  ];
+  $data['node']['supplierwiseavailability'] = [
+    'title' => t('Supplier Wise Resource Availability'),
+    'field' => [
+      'title' => t('Supplier Wise Resource Availability'),
+      'help' => t('Supplier Wise Resource Availability.'),
+      'id' => 'node_supplier_wise_resource_availability',
+    ],
+  ];
+  $data['taxonomy_term_field_data']['term_availability'] = [
+    'title' => t('Resource Role Availability'),
+    'field' => [
+      'title' => t('Resource Role Availability'),
+      'help' => t('Resource Rold Availability.'),
+      'id' => 'term_data_resource_availability',
+    ],
+  ];
+}
+
+/**
+ * Implements a helper function to calculate availabilty based on role id.
+ */
+function suppliermonitoring_term_resource_availability_calculator($tid) {
+  $resource_available = $total = 0;
+  $connection = \Drupal::database();
+  $query = $connection->select('node__field_supplier_resource_role', 'r');
+  $query->join('node_field_data', 'n', 'n.nid = r.entity_id');
+  $query->condition('r.field_supplier_resource_role_target_id', $tid);
+  $query->fields('n', ['nid']);
+  $query->condition('n.status', 1);
+  $query->condition('n.type', 'supplier_resource');
+  $results = $query->execute()->fetchAll();
+
+  foreach ($results as $result) {
+    $availability = 0;
+    $total++;
+    $availability = suppliermonitoring_resource_availability_calculator($result->nid);
+    if ($availability > 0) {
+      $resource_available++;
+    }
+  }
+  return "$resource_available out of $total";
+}
+
+/**
+ * Implements a helper function to calculate availabilty based on Supplier id.
+ */
+function suppliermonitoring_supplier_wise_resource_availability_calculator($nid) {
+  $resource_available = $total = 0;
+  $connection = \Drupal::database();
+  $query = $connection->select('node__field_supplier_resource_company', 's');
+  $query->join('node_field_data', 'n', 'n.nid = s.entity_id');
+  $query->condition('s.field_supplier_resource_company_target_id', $nid);
+  $query->fields('n', ['nid']);
+  $query->condition('n.status', 1);
+  $query->condition('n.type', 'supplier_resource');
+  $results = $query->execute()->fetchAll();
+
+  foreach ($results as $result) {
+    $availability = 0;
+    $total++;
+    $availability = suppliermonitoring_resource_availability_calculator($result->nid);
+    if ($availability > 0) {
+      $resource_available++;
+    }
+  }
+  return "$resource_available out of $total";
+}
+
+/**
+ * Implements a helper function to calculate availabilty of resource by nid.
+ */
+function suppliermonitoring_resource_availability_calculator($nid) {
+  $connection = \Drupal::database();
+  $query = $connection->select('field_collection_item__field_supplier_resource', 'r');
+  $query->join('field_collection_item', 'i', 'i.item_id = r.entity_id');
+  $query->condition('r.field_supplier_resource_target_id', $nid);
+  $query->fields('i', ['item_id']);
+  $results = $query->execute()->fetchAll();
+  $allocation = 0;
+  foreach ($results as $result) {
+    $fc = FieldCollectionItem::load($result->item_id);
+    if (isset($fc) && !empty($fc)) {
+      $allocation_end_date = $fc->field_allocation_end_date->getString();
+      $allocation_end_date_timestamp = strtotime($allocation_end_date);
+      if ($allocation_end_date_timestamp > time()) {
+        $allocation += $fc->get('field_allocation_percentage')->getString();
+      }
+    }
+  }
+  return 100 - $allocation;
 }

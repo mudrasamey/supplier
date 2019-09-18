@@ -45,3 +45,16 @@
 #edit-field-resources-wrapper .form-wrapper .form-group, #edit-field-resources-wrapper .form-wrapper .form-item,#edit-field-resources-wrapper .form-actions{
   margin: 0;
 }
+
+.path-resource-availability fieldset{
+  display: inline-block;
+  vertical-align: top;
+  width: 43%;
+  margin-right: 6%;
+  border: 1px solid #e6e6e6;
+  padding: 20px;
+  min-height: 410px;
+}
+.path-resource-availability .page-title{
+  padding-bottom: 20px;
+}
