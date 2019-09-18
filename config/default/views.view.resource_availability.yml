@@ -3,13 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_overall_rating
     - field.storage.node.field_supplier_resource_role
     - node.type.supplier_resource
     - taxonomy.vocabulary.roles
   module:
     - node
-    - options
     - suppliermonitoring
     - taxonomy
     - user
@@ -60,6 +58,9 @@ display:
           offset: 0
           id: 0
           total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -68,9 +69,6 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
       style:
         type: table
       row:
@@ -190,8 +188,8 @@ display:
           id: field_overall_rating
           table: node__field_overall_rating
           field: field_overall_rating
-          relationship: none
-          group_type: group
+          relationship: reverse__node__field_supplier_res_fb_resource
+          group_type: avg
           admin_label: ''
           label: 'Overall Rating'
           exclude: false
@@ -235,7 +233,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: list_default
+          type: list_key
           settings: {  }
           group_column: value
           group_columns: {  }
@@ -479,28 +477,37 @@ display:
             group_items: {  }
           plugin_id: numeric
       sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
+        field_overall_rating_value:
+          id: field_overall_rating_value
+          table: node__field_overall_rating
+          field: field_overall_rating_value
+          relationship: reverse__node__field_supplier_res_fb_resource
+          group_type: avg
           admin_label: ''
+          order: DESC
           exposed: false
           expose:
             label: ''
-          granularity: second
+          plugin_id: standard
       title: 'Resource Availability'
       header: {  }
       footer: {  }
       empty: {  }
-      relationships: {  }
+      relationships:
+        reverse__node__field_supplier_res_fb_resource:
+          id: reverse__node__field_supplier_res_fb_resource
+          table: node_field_data
+          field: reverse__node__field_supplier_res_fb_resource
+          relationship: none
+          group_type: group
+          admin_label: field_supplier_res_fb_resource
+          required: false
+          entity_type: node
+          plugin_id: entity_reverse
       arguments: {  }
       display_extenders: {  }
+      group_by: true
+      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -512,7 +519,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_overall_rating'
         - 'config:field.storage.node.field_supplier_resource_role'
   page_1:
     display_plugin: page
@@ -533,5 +539,4 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_overall_rating'
         - 'config:field.storage.node.field_supplier_resource_role'
