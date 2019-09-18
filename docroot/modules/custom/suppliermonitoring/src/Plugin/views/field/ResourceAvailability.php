@@ -20,6 +20,8 @@ use Drupal\views\ResultRow;
 class ResourceAvailability extends FieldPluginBase {
 
   /**
+   * Query for view handler.
+   *
    * @{inheritdoc}
    */
   public function query() {
@@ -27,11 +29,12 @@ class ResourceAvailability extends FieldPluginBase {
   }
 
   /**
+   * Render for field handler.
+   *
    * @{inheritdoc}
    */
   public function render(ResultRow $values) {
-    $allocation = suppliermonitoring_resource_availability_calculator($values->nid) . '%';
-    return $this->t($allocation);
+    return suppliermonitoring_resource_availability_calculator($values->nid) . '%';
   }
-  
+
 }
