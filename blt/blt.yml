@@ -37,7 +37,6 @@ modules:
     enable: [acquia_connector, shield]
     uninstall: [devel, views_ui]
 disable-targets:
-  tests:
-    behat: { run: true }
+  tests: true
 cloud:
   appId: d17f1f44-5baa-4b2d-aea6-b2ce232256c1
