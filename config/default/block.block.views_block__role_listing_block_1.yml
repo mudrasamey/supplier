@@ -12,15 +12,15 @@ dependencies:
 id: views_block__role_listing_block_1
 theme: sms_theme
 region: content
-weight: -9
+weight: -8
 provider: null
 plugin: 'views_block:role_listing-block_1'
 settings:
   id: 'views_block:role_listing-block_1'
-  label: 'Role Wise Avaiability'
+  label: 'Role Wise Availability'
   provider: views
   label_display: visible
-  views_label: 'Role Wise Avaiability'
+  views_label: 'Role Wise Availability'
   items_per_page: none
 visibility:
   request_path:

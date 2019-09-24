@@ -34,7 +34,7 @@ class ResourceAvailability extends FieldPluginBase {
    * @{inheritdoc}
    */
   public function render(ResultRow $values) {
-    return suppliermonitoring_resource_availability_calculator($values->nid) . '%';
+    return suppliermonitoring_resource_availability_calculator($values->nid);
   }
 
 }
