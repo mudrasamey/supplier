@@ -29,6 +29,7 @@
         "sort-packages": true
     },
     "require": {
+        "php": ">=7.1",
         "acquia/blt": "^10.0.0",
         "acquia/drupal-spec-tool": "^2.0.0",
         "acquia/lightning": "^3.1.0",
@@ -40,7 +41,7 @@
         "drupal/config_split": "^1.4",
         "drupal/core": "^8.6.0",
         "drupal/devel": "^2.0.0",
-        "drupal/druadmin_lte_theme": "1.0.0",
+        "drupal/druadmin_lte_theme": "^1.0",
         "drupal/features": "^3.8.0",
         "drupal/field_collection": "^1.0@alpha",
         "drupal/field_group": "^3.0",
@@ -49,8 +50,7 @@
         "drupal/qa_accounts": "^1.0.0-alpha1",
         "drupal/seckit": "^1.0.0-alpha2",
         "drupal/shield": "^1.2.0",
-        "drupal/views_autocomplete_filters": "1.2.0",
-        "php": ">=7.1"
+        "drupal/views_autocomplete_filters": "1.2.0"
     },
     "require-dev": {
         "acquia/blt-require-dev": "^10.0.0-alpha1",
@@ -65,6 +65,9 @@
         "patches": {
             "drupal/config_split": {
                 "Shortcut set issue fix": "./patches/shortcut-set-issue-fix.patch"
+            },
+            "drupal/druadmin_lte_theme": {
+                "Call to a member function getFileUri() on null" : "./patches/call_to_undefined_get_uri.patch"
             }
         },
         "installer-types": [

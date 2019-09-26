@@ -1,0 +1,18 @@
+diff --git a/yorkshire.theme b/yorkshire.theme
+index 3c25194..e785e25 100644
+--- a/yorkshire.theme
++++ b/yorkshire.theme
+@@ -16,9 +16,11 @@ function yorkshire_preprocess_page(&$variables) {
+     else{
+       $field = \Drupal\field\Entity\FieldConfig::loadByName('user', 'user', 'user_picture');
+       $default_image = $field->getSetting('default_image');
+-      if($default_image['uuid']){
++      if ($default_image['uuid']){
+         $file = \Drupal::entityManager()->loadEntityByUuid('file', $default_image['uuid']);
+-        $picture = file_create_url($file->getFileUri());
++        if ($file && $file_uri = $file->getFileUri()) {
++          $picture = file_create_url($file->getFileUri());
++        }
+       }
+     }
+   } 
